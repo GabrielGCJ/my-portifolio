@@ -1,79 +1,57 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
-export const HeaderContainer = styled.header`
-  width: 100%;
-  height: 6.5rem;
-  background: ${({ theme }) => theme.colors["base-background"]};
+export const GlobalHeaderContainer = styled.header`
   display: flex;
   align-items: center;
   justify-content: center;
-  position: sticky;
-  top: 0;
-  left: 0;
-  z-index: 5;
+  padding: 0px 10px 0px 10px;
+  width: 100%;
 
-  > div {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  height: 2.5rem;
+  background: ${({ theme }) => theme.colors["base-hover"]};
+
+  :hover {
+    transition: 1s;
+    background: ${({ theme }) => theme.colors["base-error"]};
   }
 `;
 
-export const HeaderButtonsContainer = styled.div`
+export const HeaderContainer = styled.header`
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 10px;
 `;
 
-interface HeaderButtonProps {
-  variant: "purple" | "yellow";
-}
+const LeftAndRigth = styled.div`
+  /* display: flex; */
+  /* align-items: center; */
+`;
 
-export const HeaderButton = styled.button<HeaderButtonProps>`
+export const HeaderContainerLeft = styled(LeftAndRigth)``;
+
+export const HeaderContainerRigth = styled(LeftAndRigth)`
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 4px;
-  min-width: 2.3rem;
-  height: 2.3rem;
-  border-radius: 6px;
-  border: none;
-  padding: 0 0.5rem;
-  position: relative;
-  cursor: inherit;
+  flex-direction: row;  
+  gap: 20px;  
+  height: 3.5rem;
+  
+  h1 {
+    padding: 10px;
+    :hover {
+      transition: 0.2s;
+      background: ${({ theme }) => theme.colors["brand-purple"]};
+      border-radius: 5px 0px 5px 0px;
 
-  span {
-    position: absolute;
-    width: 1.25rem;
-    height: 1.25rem;
-    border-radius: 50%;
-    top: calc(-1.25rem / 2);
-    right: calc(-1.25rem / 2);
-    color: ${({ theme }) => theme.colors["base-white"]};
+      border-bottom: 5px solid green;
+    }
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.75rem;
-    font-weight: 700;
+
+    height: 100%;
+    cursor:default ;
   }
-
-  font-size: ${({ theme }) => theme.textSizes["text-regular-s"]};
-
-  ${({ variant }) => css`
-    background: ${({ theme }) => theme.colors[`brand-${variant}-light`]};
-    color: ${({ theme }) => theme.colors[`brand-${variant}-dark`]};
-
-    span {
-      background: ${({ theme }) => theme.colors[`brand-${variant}-dark`]};
-    }
-  `}
-
-  ${({ variant }) =>
-    variant === "purple" &&
-    css`
-      svg {
-        color: ${({ theme }) => theme.colors[`brand-${variant}`]};
-      }
-    `}
 `;
+
