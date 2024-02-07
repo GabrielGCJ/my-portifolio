@@ -5,12 +5,12 @@ import {
   HeaderContainerLeft,
   HeaderContainerRigth,
   GlobalHeaderContainer,
-  LanguageContainer,
 } from "./styles";
+import { MenuAboutMe } from "../MenuAboutMe";
 
 export const Header = () => {
   const [language, setLanguage] = useState(false);
-
+  const [aboutMe, setAboutMe] = useState(false);
   // const toggleLanguage = () => {
   //   setLanguage(!language);
   // };
@@ -23,26 +23,26 @@ export const Header = () => {
         </HeaderContainerLeft>
         <HeaderContainerRigth>
           <h1>Home</h1>
-          <LanguageContainer>
-            {/* <h1
-              onMouseEnter={() => setLanguage(true)}
-              onMouseLeave={() => setLanguage(false)}
-            >
-              
-              Idioma
-            </h1> */}
-
+          <div>
             <h1
-            // onMouseOver ={toggleLanguage}
+              // onMouseOver ={toggleLanguage}
               onMouseEnter={() => setLanguage(true)}
               onMouseLeave={() => setLanguage(false)}
             >
-              
               Idioma
             </h1>
             {language && <MenuLanguage />}
-          </LanguageContainer>
-          <h1>Quem sou eu</h1>
+          </div>
+          <div>
+            <h1
+              // onMouseOver ={toggleLanguage}
+              onMouseEnter={() => setAboutMe(true)}
+              onMouseLeave={() => setAboutMe(false)}
+            >
+              Quem sou eu
+            </h1>
+            {aboutMe && <MenuAboutMe />}
+          </div>
           <h1>Projetos</h1>
           <h1>Contato</h1>
         </HeaderContainerRigth>

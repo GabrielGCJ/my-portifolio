@@ -29,8 +29,6 @@ const LeftAndRigth = styled.div`
   /* align-items: center; */
 `;
 
-export const LanguageContainer = styled.div``;
-
 export const HeaderContainerLeft = styled(LeftAndRigth)``;
 
 export const HeaderContainerRigth = styled(LeftAndRigth)`
