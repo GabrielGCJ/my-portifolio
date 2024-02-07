@@ -10,13 +10,16 @@ const moveRight = keyframes`
 
   `
 
-export const MenuLanguageContainer = styled.header`
+export const MenuMenuAboutMeContainer = styled.header`
   position: absolute ;
-  width:  7rem;
-  height: 7rem;
+  width:  10rem;
+  height: 10rem;
 
   background-color: black ;
   animation: ${moveRight} 0.1s ease-in-out forwards;
+  
 `;
+
+
 
 
