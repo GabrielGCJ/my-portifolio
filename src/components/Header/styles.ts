@@ -11,7 +11,7 @@ export const GlobalHeaderContainer = styled.header`
   background: ${({ theme }) => theme.colors["base-hover"]};
 
   :hover {
-    transition: 1s;
+    transition: 1.5s;
     background: ${({ theme }) => theme.colors["base-error"]};
   }
 `;
