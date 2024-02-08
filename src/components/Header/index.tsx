@@ -19,21 +19,23 @@ export const Header = () => {
         </div>
         <HeaderContainerRigth>
           <h1>Home</h1>
-          <div>
+          <div
+            onMouseEnter={() => setLanguageContainerActive(true)}
+            onMouseLeave={() => setLanguageContainerActive(false)}
+          >
             <h1
-              // onMouseOver ={toggleLanguage}
-              onMouseEnter={() => setLanguageContainerActive(true)}
-              onMouseLeave={() => setLanguageContainerActive(false)}
+            // onMouseOver ={toggleLanguage}
             >
               Idioma
             </h1>
             {languageContainerActive && <MenuLanguage />}
           </div>
-          <div>
+          <div
+            onMouseEnter={() => setAboutMeContainerActive(true)}
+            onMouseLeave={() => setAboutMeContainerActive(false)}
+          >
             <h1
-              // onMouseOver ={toggleLanguage}
-              onMouseEnter={() => setAboutMeContainerActive(true)}
-              onMouseLeave={() => setAboutMeContainerActive(false)}
+            // onMouseOver ={toggleLanguage}
             >
               Quem sou eu
             </h1>
