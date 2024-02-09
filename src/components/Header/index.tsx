@@ -5,6 +5,7 @@ import {
   HeaderContainer,
   HeaderContainerRigth,
   GlobalHeaderContainer,
+  HeaderContainerLeft
 } from "./styles";
 
 export const Header = () => {
@@ -14,9 +15,9 @@ export const Header = () => {
   return (
     <GlobalHeaderContainer>
       <HeaderContainer>
-        <div>
+        <HeaderContainerLeft>
           <h1>Gabriel Jorge</h1>
-        </div>
+        </HeaderContainerLeft>
         <HeaderContainerRigth>
           <h1>Home</h1>
           <div
