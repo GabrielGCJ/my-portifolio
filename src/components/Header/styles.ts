@@ -1,6 +1,18 @@
 import styled from "styled-components";
 
 export const GlobalHeaderContainer = styled.header`
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  z-index: 1;
+
+h1{
+  color: ${({theme}) => theme.colors["base-white"]};
+}
+
+
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -8,7 +20,6 @@ export const GlobalHeaderContainer = styled.header`
   width: 100%;
 
   height: 2.5rem;
-  background: #FAFAFA;
 
   :hover {
     transition: 1.5s;
