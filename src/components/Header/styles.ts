@@ -8,7 +8,7 @@ export const GlobalHeaderContainer = styled.header`
   width: 100%;
 
   height: 2.5rem;
-  background: ${({ theme }) => theme.colors["base-hover"]};
+  background: #FAFAFA;
 
   :hover {
     transition: 1.5s;
@@ -22,6 +22,31 @@ export const HeaderContainer = styled.header`
   justify-content: space-between;
   width: 100%;
   font-size: 10px;
+`;
+
+export const HeaderContainerLeft = styled.div`
+  @keyframes floatAndChangeFont {
+    0% {
+      transform: translateX(0px);
+      font-family: Arial, sans-serif;
+    }
+    25% {
+      transform: translateX(50px);
+      font-family: "Times New Roman", Times, serif;
+    }
+    50% {
+      transform: translateX(25px);
+      font-family: "Courier New", Courier, monospace;
+    }
+    75% {
+      transform: translateX(0px);
+      font-family: Arial, sans-serif;
+    }
+  }
+
+  :hover {
+    animation: floatAndChangeFont 4s none;
+  }
 `;
 
 export const HeaderContainerRigth = styled.div`
