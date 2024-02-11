@@ -4,6 +4,9 @@ import {
   PresentationComponentContainer,
   WallpaperLayerContainer,
   NameLayerContainer,
+  RotatingRing,
+  LeftRing,
+  RigthRing,
 } from "./styles";
 
 export const PresentationComponent = () => {
@@ -13,12 +16,16 @@ export const PresentationComponent = () => {
       <BlurLayerContainer />
       <ProfessionLayerContainer>
         <h1>Full-Stack</h1>
-        <h1>Web Develloper</h1>
+        <h1>Developer</h1>
       </ProfessionLayerContainer>
       <NameLayerContainer>
         <h1>G</h1>
         <h1>J</h1>
       </NameLayerContainer>
+      <RotatingRing>
+        <LeftRing/>
+        <RigthRing/>
+      </RotatingRing>
     </PresentationComponentContainer>
   );
 };
