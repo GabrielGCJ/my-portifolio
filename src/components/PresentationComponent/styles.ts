@@ -2,8 +2,8 @@ import styled from "styled-components";
 import img from "../../assents/pattern-randomized.svg";
 
 export const PresentationComponentContainer = styled.div`
-  position: relative;
   display: flex;
+  position: relative;
   height: 100vh;
   width: 100%;
 `;
@@ -27,7 +27,6 @@ export const WallpaperLayerContainer = styled.div`
   width: 100%;
 
   background: url(${img});
-  background-size: cover; 
   background-size: 200%; 
   background-position: center; 
 
@@ -60,10 +59,11 @@ export const WallpaperLayerContainer = styled.div`
   background: url(${img});
   transform: rotate(180deg);
   background-size: 400%;
-
   background-position: center;
-
   animation: zoom 2s linear alternate-reverse;
+
+
+  /* ---- */
 `;
 
 export const BlurLayerContainer = styled.div`
@@ -95,4 +95,37 @@ export const BlurLayerContainer = styled.div`
 
   height: 100vh;
   width: 100%;
+`;
+
+export const ProfessionLayerContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  gap: 5rem;
+  z-index: 3;
+
+  position: absolute;
+
+  h1 {
+    color: pink;
+  }
+`;
+
+export const NameLayerContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  gap: 5rem;
+  z-index: 4;
+
+  position: absolute;  
+
+  h1 {
+    color: pink;
+  }
 `;

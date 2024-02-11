@@ -5,7 +5,7 @@ export const GlobalHeaderContainer = styled.header`
   top: 0;
   left: 0;
 
-  z-index: 3;
+  z-index: 5;
 
 h1{
   color: ${({theme}) => theme.colors["base-white"]};
