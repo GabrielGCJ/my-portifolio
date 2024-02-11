@@ -62,7 +62,6 @@ export const WallpaperLayerContainer = styled.div`
   background-position: center;
   animation: zoom 2s linear alternate-reverse;
 
-
   /* ---- */
 `;
 
@@ -104,12 +103,14 @@ export const ProfessionLayerContainer = styled.div`
   height: 100vh;
   width: 100%;
   gap: 5rem;
-  z-index: 3;
+  z-index: 4;
 
   position: absolute;
 
   h1 {
     color: pink;
+    /* cursor: none; */
+    cursor: text;
   }
 `;
 
@@ -121,11 +122,70 @@ export const NameLayerContainer = styled.div`
   height: 100vh;
   width: 100%;
   gap: 5rem;
-  z-index: 4;
-
-  position: absolute;  
+  z-index: 3;
+  font-size: 4rem;
+  position: absolute;
 
   h1 {
     color: pink;
+    cursor: text;
   }
 `;
+
+export const RotatingRing = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  z-index: 5;
+  position: absolute;
+`;
+
+export const LeftRing = styled.div`
+  @keyframes bloco {
+    0% {
+      width: 2vw;
+      height: 2vw;
+      transform: rotate(0deg);
+    }
+    5% {
+      width: 30vw;
+      height: 30vw;
+    }
+    
+    6% {
+      /* transform: rotate(0deg); */
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+    
+    
+
+  }
+
+  @keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+  display: flex;
+  width: 30vw;
+  height: 30vw;
+
+  /* width: 5rem;
+  height: 5 rem; */
+  border: 2px solid rebeccapurple;
+
+  border-radius: 0.8rem;
+
+  animation: bloco 60s linear alternate;
+  /* animation: rotate 60s linear alternate; */
+`;
+
+export const RigthRing = styled.div``;
