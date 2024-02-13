@@ -61,8 +61,6 @@ export const WallpaperLayerContainer = styled.div`
   background-size: 400%;
   background-position: center;
   animation: zoom 2s linear alternate-reverse;
-
-  /* ---- */
 `;
 
 export const BlurLayerContainer = styled.div`
@@ -109,8 +107,38 @@ export const ProfessionLayerContainer = styled.div`
 
   h1 {
     color: pink;
-    /* cursor: none; */
     cursor: text;
+  }
+
+  @keyframes subir {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-2rem);
+    }
+    100% {
+      ransform: translateY(0);
+    }
+  }
+
+  @keyframes decer {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(2rem);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  .left {
+    animation: subir 5s ease-in-out forwards;
+  }
+  .right {
+    animation: decer 5s ease-in-out forwards;
   }
 `;
 
@@ -130,6 +158,38 @@ export const NameLayerContainer = styled.div`
     color: pink;
     cursor: text;
   }
+
+  @keyframes moveLeft {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(2rem);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes moveRight {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(-2rem);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  .top {
+    animation: moveLeft 5s ease-in-out forwards;
+  }
+
+  .low {
+    animation: moveRight 5s ease-in-out forwards;
+  }
 `;
 
 export const RotatingRing = styled.div`
@@ -142,7 +202,34 @@ export const RotatingRing = styled.div`
   position: absolute;
 `;
 
-export const LeftRing = styled.div`
+export const PrimaryRing = styled.div`
+  @keyframes rotate {
+    0% {
+      width: 2vw;
+      height: 2vw;
+      transform: rotate(0deg);
+    }
+    5% {
+      width: 30vw;
+      height: 30vw;
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  display: flex;
+  width: 30vw;
+  height: 30vw;
+
+  border: 9px solid rgb(102, 0, 17);
+
+  border-radius: 0.8rem;
+
+  animation: bloco 20s ease-in-out infinite alternate;
+`;
+
+export const SecundaryRing = styled.div`
   @keyframes bloco {
     0% {
       width: 2vw;
@@ -153,39 +240,53 @@ export const LeftRing = styled.div`
       width: 30vw;
       height: 30vw;
     }
-    
-    6% {
-      /* transform: rotate(0deg); */
-    }
     100% {
       transform: rotate(360deg);
     }
-    
-    
-
   }
-
-  @keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
   display: flex;
   width: 30vw;
   height: 30vw;
 
-  /* width: 5rem;
-  height: 5 rem; */
-  border: 2px solid rebeccapurple;
+  border: 6px solid rgb(35, 35, 35);
 
   border-radius: 0.8rem;
 
-  animation: bloco 60s linear alternate;
-  /* animation: rotate 60s linear alternate; */
+  animation: bloco 23s ease-in-out infinite alternate;
 `;
 
-export const RigthRing = styled.div``;
+export const TercearyRing = styled.div`
+  @keyframes bloco {
+    0% {
+      width: 2vw;
+      height: 2vw;
+      transform: rotate(0deg);
+    }
+    5% {
+      width: 30vw;
+      height: 30vw;
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  display: flex;
+  width: 30vw;
+  height: 30vw;
+  border: 2px solid white;
+
+  border-radius: 0.8rem;
+
+  animation: bloco 26s ease-in-out infinite alternate;
+`;
