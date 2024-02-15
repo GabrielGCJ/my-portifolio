@@ -35,7 +35,86 @@ export const defaultTheme = {
     "components-button-s": "0.75rem",
   },
   fonts: {
-    regular: "'Roboto'",
+    roboto: "'Roboto'",
     title: "'Baloo 2'",
   },
 };
+
+
+// .protest-strike-regular {
+//   font-family: "Protest Strike", sans-serif;
+//   font-weight: 400;
+//   font-style: normal;
+// }
+
+// .roboto-thin {
+//   font-family: "Roboto", sans-serif;
+//   font-weight: 100;
+//   font-style: normal;
+// }
+
+// .roboto-light {
+//   font-family: "Roboto", sans-serif;
+//   font-weight: 300;
+//   font-style: normal;
+// }
+
+// .roboto-regular {
+//   font-family: "Roboto", sans-serif;
+//   font-weight: 400;
+//   font-style: normal;
+// }
+
+// .roboto-medium {
+//   font-family: "Roboto", sans-serif;
+//   font-weight: 500;
+//   font-style: normal;
+// }
+
+// .roboto-bold {
+//   font-family: "Roboto", sans-serif;
+//   font-weight: 700;
+//   font-style: normal;
+// }
+
+// .roboto-black {
+//   font-family: "Roboto", sans-serif;
+//   font-weight: 900;
+//   font-style: normal;
+// }
+
+// .roboto-thin-italic {
+//   font-family: "Roboto", sans-serif;
+//   font-weight: 100;
+//   font-style: italic;
+// }
+
+// .roboto-light-italic {
+//   font-family: "Roboto", sans-serif;
+//   font-weight: 300;
+//   font-style: italic;
+// }
+
+// .roboto-regular-italic {
+//   font-family: "Roboto", sans-serif;
+//   font-weight: 400;
+//   font-style: italic;
+// }
+
+// .roboto-medium-italic {
+//   font-family: "Roboto", sans-serif;
+//   font-weight: 500;
+//   font-style: italic;
+// }
+
+// .roboto-bold-italic {
+//   font-family: "Roboto", sans-serif;
+//   font-weight: 700;
+//   font-style: italic;
+// }
+
+// .roboto-black-italic {
+//   font-family: "Roboto", sans-serif;
+//   font-weight: 900;
+//   font-style: italic;
+// }

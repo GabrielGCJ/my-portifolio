@@ -7,11 +7,9 @@ export const GlobalHeaderContainer = styled.header`
 
   z-index: 6;
 
-h1{
-  color: ${({theme}) => theme.colors["base-white"]};
-}
-
-
+  h1 {
+    color: ${({ theme }) => theme.colors["base-white"]};
+  }
 
   display: flex;
   align-items: center;
