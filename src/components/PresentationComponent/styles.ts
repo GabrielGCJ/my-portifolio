@@ -100,8 +100,9 @@ export const ProfessionLayerContainer = styled.div`
   align-items: center;
   height: 100vh;
   width: 100%;
-  gap: 5rem;
-  z-index: 4;
+  gap: 5vw;
+  z-index: 5;
+  font-size: 1vw;
 
   position: absolute;
 
@@ -149,9 +150,9 @@ export const NameLayerContainer = styled.div`
   flex-direction: column;
   height: 100vh;
   width: 100%;
-  gap: 5rem;
-  z-index: 3;
-  font-size: 4rem;
+  gap: 5vw;
+  z-index: 4;
+  font-size: 5vw;
   position: absolute;
 
   h1 {
@@ -198,7 +199,7 @@ export const RotatingRing = styled.div`
   align-items: center;
   height: 100vh;
   width: 100%;
-  z-index: 5;
+  z-index: 3;
   position: absolute;
 `;
 
@@ -210,8 +211,8 @@ export const PrimaryRing = styled.div`
       transform: rotate(0deg);
     }
     5% {
-      width: 30vw;
-      height: 30vw;
+      width: calc((20vw + 20vh) / 2);
+      height: calc((20vw + 20vh) / 2);
     }
     100% {
       transform: rotate(360deg);
@@ -219,8 +220,8 @@ export const PrimaryRing = styled.div`
   }
 
   display: flex;
-  width: 30vw;
-  height: 30vw;
+  width: calc(20vw + 20vh / 2);
+  height: calc(20vw + 20vh / 2);
 
   border: 9px solid rgb(102, 0, 17);
 
@@ -237,8 +238,8 @@ export const SecundaryRing = styled.div`
       transform: rotate(0deg);
     }
     5% {
-      width: 30vw;
-      height: 30vw;
+      width: calc(20vw + 20vh / 2);
+      height: calc(20vw + 20vh / 2);
     }
     100% {
       transform: rotate(360deg);
@@ -246,8 +247,8 @@ export const SecundaryRing = styled.div`
   }
 
   display: flex;
-  width: 30vw;
-  height: 30vw;
+  width: calc(20vw + 20vh / 2);
+  height: calc(20vw + 20vh / 2);
 
   border: 6px solid rgb(35, 35, 35);
 
@@ -264,8 +265,8 @@ export const TercearyRing = styled.div`
       transform: rotate(0deg);
     }
     5% {
-      width: 30vw;
-      height: 30vw;
+      width: calc(20vw + 20vh / 2);
+      height: calc(20vw + 20vh / 2);
     }
     100% {
       transform: rotate(360deg);
@@ -282,8 +283,8 @@ export const TercearyRing = styled.div`
   }
 
   display: flex;
-  width: 30vw;
-  height: 30vw;
+  width: calc(20vw + 20vh / 2);
+  height: calc(20vw + 20vh / 2);
   border: 2px solid white;
 
   border-radius: 0.8rem;
