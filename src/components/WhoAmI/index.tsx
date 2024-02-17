@@ -1,8 +1,16 @@
-import { ImageContainer, TextContainer, WhoAmIContainer } from "./styles";
+import {
+  BlurLayerWhoAmIContainer,
+  ImageContainer,
+  TextContainer,
+  WallpaperWhoAmILayerContainer,
+  WhoAmIContainer,
+} from "./styles";
 import img from "../../assents/perfil-image.jpg";
 export const WhoAmI = () => {
   return (
     <WhoAmIContainer>
+      <WallpaperWhoAmILayerContainer />
+      <BlurLayerWhoAmIContainer />
       <ImageContainer>
         <img src={img} alt="" />
       </ImageContainer>
