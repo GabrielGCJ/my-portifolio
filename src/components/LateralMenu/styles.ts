@@ -22,6 +22,17 @@ export const LateralMenuContainer = styled.div`
   border-radius: 10px;
   gap: 1rem;
 
+  @keyframes moveLeftToZero {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  animation: moveLeftToZero 2s forwards;
+
   img {
     width: 2vw;
   }
