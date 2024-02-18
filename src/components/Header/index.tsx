@@ -65,7 +65,7 @@ export const Header = () => {
           </HeaderContainerRigth>
         ) : (
           <HeaderContainerRigthMobile>
-            <img src={icone} alt="" style={{ fill: "white" }} />
+            <img src={icone} alt="options"/>
           </HeaderContainerRigthMobile>
         )}
       </HeaderContainer>
