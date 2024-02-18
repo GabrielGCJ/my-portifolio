@@ -17,7 +17,6 @@ export const LateralMenuContainer = styled.div`
   display: flex;
   flex-direction: column;
   padding: 0.5rem;
-
   background-color: rgba(102, 0, 17, 0.5);
   border-radius: 10px;
   gap: 1rem;
@@ -31,13 +30,23 @@ export const LateralMenuContainer = styled.div`
     }
   }
 
-  animation: moveLeftToZero 2s forwards;
+  @keyframes adjustSvgColors {
+    0% {
+      filter: invert(0%);
+    }
+    100% {
+      filter: invert(100%);
+    }
+  }
 
   img {
     width: 2vw;
   }
 
-  .whiteIcon {
-    filter: invert(100%);
+  animation: moveLeftToZero 2s forwards;
+  
+  /* A baixo estamos aplicando a animação de ajuste de cores apenas para imagens SVG */
+  img[src$=".svg"] {
+    animation: adjustSvgColors 2s forwards;
   }
 `;
