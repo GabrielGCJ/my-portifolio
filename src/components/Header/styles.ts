@@ -81,3 +81,18 @@ export const HeaderContainerRigth = styled.div`
     }
   }
 `;
+
+export const HeaderContainerRigthMobile = styled.div`
+  display: flex;
+
+  padding: 1rem;
+
+  img {
+    /* fill: red; */
+    width: 1.875rem;
+  }
+
+  /* svg {
+    color: ${({ theme }) => theme.colors["brand-purple"]};
+  } */
+`;
