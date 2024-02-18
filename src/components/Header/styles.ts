@@ -21,7 +21,7 @@ export const GlobalHeaderContainer = styled.header`
 
   :hover {
     transition: 1.5s;
-    background: ${({ theme }) => theme.colors["base-error"]};
+    background: rgba(160, 0, 17, 0.9);;
   }
 `;
 
