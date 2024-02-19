@@ -20,7 +20,7 @@ export const MenuMenuAboutMeContainer = styled.header`
 
   border-radius: 5px;
   border: 2px solid red;
-  box-shadow: 10px 10px 5px lightblue;
+  /* box-shadow: 10px 10px 5px lightblue; */
 
   position: absolute;
   width: 12rem;
@@ -38,7 +38,7 @@ export const MenuMenuAboutMeContainer = styled.header`
 
     :hover {
       transition: 0.5s;
-      border-right: 6px solid greenyellow;
+      border-right: 6px solid rgb(102,0,17);
     }
   }
 `;
