@@ -41,10 +41,15 @@ export const LateralMenuContainer = styled.div`
 
   img {
     width: 2vw;
+    transition: 0.25s linear;
+
+    :hover {
+      width: 3vw;
+    }
   }
 
   animation: moveLeftToZero 2s forwards;
-  
+
   /* A baixo estamos aplicando a animação de ajuste de cores apenas para imagens SVG */
   img[src$=".svg"] {
     animation: adjustSvgColors 2s forwards;
