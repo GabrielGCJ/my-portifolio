@@ -10,6 +10,8 @@ const moveRight = keyframes`
     transform: translateX(0);
   }
 
+  
+
   `;
 
 export const MenuMenuAboutMeContainer = styled.header`
@@ -17,6 +19,8 @@ export const MenuMenuAboutMeContainer = styled.header`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  font-family: ${({ theme }) => theme.fonts.roboto};
 
   border-radius: 5px;
   border: 2px solid red;

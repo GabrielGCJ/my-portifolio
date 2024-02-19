@@ -31,6 +31,8 @@ export const HeaderContainer = styled.header`
   justify-content: space-between;
   width: 100%;
   font-size: 10px;
+
+  font-family: ${({ theme }) => theme.fonts.roboto};
 `;
 
 export const HeaderContainerLeft = styled.div`

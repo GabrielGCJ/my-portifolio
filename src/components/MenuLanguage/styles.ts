@@ -18,6 +18,8 @@ export const MenuLanguageContainer = styled.header`
   justify-content: center;
   align-items:center ;
 
+  font-family: ${({ theme }) => theme.fonts.roboto};
+
   border-radius: 5px;
   border: 2px solid red;
   /* box-shadow: 10px 10px 5px lightblue;    */
