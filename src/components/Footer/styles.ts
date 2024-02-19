@@ -8,6 +8,7 @@ justify-content: center;
 background-color: black;
 color: white ;
 font-size: .700rem ;
+font-family: ${({ theme }) => theme.fonts.roboto};
 
 
 .negrito{
