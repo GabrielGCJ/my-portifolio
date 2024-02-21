@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { MenuLanguage } from "../MenuLanguage";
 import { MenuAboutMe } from "../MenuAboutMe";
+import { NavLink } from "react-router-dom";
 import icone from "../../assents/icone-options.svg";
 import {
   HeaderContainer,
@@ -65,7 +66,9 @@ export const Header = () => {
           </HeaderContainerRigth>
         ) : (
           <HeaderContainerRigthMobile>
-            <img src={icone} alt="options"/>
+            <NavLink to="/mobileComponent">
+              <img src={icone} alt="options" />
+            </NavLink>
           </HeaderContainerRigthMobile>
         )}
       </HeaderContainer>
