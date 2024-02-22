@@ -5,10 +5,9 @@ export const MobileConfigGlobalContainer = styled.div`
 `;
 
 export const BlurLayerContainer = styled.div`
-    position: absolute;
-    top: 0;
-    left: 0;
-    
+  position: absolute;
+  top: 0;
+  left: 0;
   @keyframes blur {
     0% {
       background-color: rgba(0, 0, 0, 0);

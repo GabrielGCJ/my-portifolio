@@ -7,12 +7,13 @@ import { PortfolioContext } from "../../contexts/PortfolioContext";
 import { MenuOptionsMobile } from "../../components/MenuOptionsMobile";
 
 export function HomePage() {
-  const { menuMobileOptions } = useContext(PortfolioContext);
+  const { menuMobileOptions, widthScream } = useContext(PortfolioContext);
+  const larguraLimite = 750
   return (
     <HomeContainer>
       <PresentationComponent />
       <LateralMenu />
-      {menuMobileOptions === true ? <MenuOptionsMobile/> : null}
+      {menuMobileOptions === true && widthScream <= larguraLimite ? <MenuOptionsMobile/> : null}
       {/* <WhoAmI/> */}
 
     </HomeContainer>
