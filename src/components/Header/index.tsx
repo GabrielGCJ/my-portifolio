@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
+import { PortfolioContext } from "../../contexts/PortfolioContext";
+import { useContext, useState } from "react";
 import { MenuLanguage } from "../MenuLanguage";
 import { MenuAboutMe } from "../MenuAboutMe";
-import { NavLink } from "react-router-dom";
 import icone from "../../assents/icone-options.svg";
 import {
   HeaderContainer,
@@ -12,22 +12,23 @@ import {
 } from "./styles";
 
 export const Header = () => {
+  const { activateMobileOptions, widthScream } = useContext(PortfolioContext);
   const [languageContainerActive, setLanguageContainerActive] = useState(false);
   const [aboutMeContainerActive, setAboutMeContainerActive] = useState(false);
-  const [widthScream, setWidthScream] = useState(window.innerWidth);
-  const larguraLimite = 700;
+  // const [widthScream, setWidthScream] = useState(window.innerWidth);
+  const larguraLimite = 750;
 
-  useEffect(() => {
-    const handleResize = () => {
-      setWidthScream(window.innerWidth);
-    };
+  // useEffect(() => {
+  //   const handleResize = () => {
+  //     setWidthScream(window.innerWidth);
+  //   };
 
-    window.addEventListener("resize", handleResize);
+  //   window.addEventListener("resize", handleResize);
 
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, [widthScream]);
+  //   return () => {
+  //     window.removeEventListener("resize", handleResize);
+  //   };
+  // }, [widthScream]);
 
   return (
     <GlobalHeaderContainer>
@@ -65,10 +66,8 @@ export const Header = () => {
             <h1>Contato</h1>
           </HeaderContainerRigth>
         ) : (
-          <HeaderContainerRigthMobile>
-            <NavLink to="/mobileComponent">
-              <img src={icone} alt="options" />
-            </NavLink>
+          <HeaderContainerRigthMobile onClick={activateMobileOptions}>
+            <img src={icone} alt="options" />
           </HeaderContainerRigthMobile>
         )}
       </HeaderContainer>

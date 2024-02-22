@@ -1,10 +1,15 @@
+import { useContext } from "react";
 import {
   BlurLayerContainer,
   MobileConfigContainer,
   MobileConfigGlobalContainer,
 } from "./styles";
+import { PortfolioContext } from "../../contexts/PortfolioContext";
 
 export const MenuOptionsMobile = () => {
+
+  const { disableMobileOptions } = useContext(PortfolioContext);
+
   return (
     <MobileConfigGlobalContainer>      
       <BlurLayerContainer />
@@ -14,7 +19,7 @@ export const MenuOptionsMobile = () => {
         <h2>Quem sou eu</h2>
         <h2>Contatos</h2>
         <h2>Projetos</h2>
-        <h2>Sair</h2>
+        <h2 onClick={disableMobileOptions}>Sair</h2>
       </MobileConfigContainer>
     </MobileConfigGlobalContainer>
   );
