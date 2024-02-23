@@ -47,7 +47,22 @@ export const MobileConfigContainer = styled.div`
   justify-content: center;
   align-items: center;
   color: white;
-  transform: 5s linear;
   z-index: 7;
   gap: 10vh;
+  font-family: ${({ theme }) => theme.fonts.roboto};
+
+  @keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+    color:black ;
+  }
+  100% {
+    transform: translateY(0%);
+    color: white;
+  }
+}
+
+animation: slideDown 1s linear;
+
+
 `;

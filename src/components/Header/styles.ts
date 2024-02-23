@@ -20,7 +20,7 @@ export const GlobalHeaderContainer = styled.header`
   height: 2.5rem;
 
   :hover {
-    transition: 1.5s;
+    transition: 1.5s linear;
     background: rgba(160, 0, 17, 0.9);;
   }
 `;
