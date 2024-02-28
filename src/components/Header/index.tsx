@@ -2,7 +2,6 @@ import { PortfolioContext } from "../../contexts/PortfolioContext";
 import { useContext, useState } from "react";
 import { MenuLanguage } from "../MenuLanguage";
 import { MenuAboutMe } from "../MenuAboutMe";
-import icone from "../../assents/icone-options.svg";
 import {
   HeaderContainer,
   HeaderContainerRigth,
@@ -10,6 +9,7 @@ import {
   HeaderContainerLeft,
   HeaderContainerRigthMobile,
 } from "./styles";
+import { List } from "phosphor-react";
 
 export const Header = () => {
   const { activateMobileOptions, widthScream } = useContext(PortfolioContext);
@@ -67,7 +67,7 @@ export const Header = () => {
           </HeaderContainerRigth>
         ) : (
           <HeaderContainerRigthMobile onClick={activateMobileOptions}>
-            <img src={icone} alt="options" />
+            <List size={32} />
           </HeaderContainerRigthMobile>
         )}
       </HeaderContainer>
