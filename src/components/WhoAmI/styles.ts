@@ -178,6 +178,7 @@ export const ImageAndTextContainer = styled.div`
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  font-family: ${({ theme }) => theme.fonts.roboto};
 
   @media (max-width: 800px) {
     flex-direction: column;
