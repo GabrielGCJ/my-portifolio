@@ -36,6 +36,19 @@ export const HeaderContainer = styled.header`
 `;
 
 export const HeaderContainerLeft = styled.div`
+
+@keyframes moveLeftToZero {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+animation: moveLeftToZero 2s forwards;
+
+:hover {
   @keyframes floatAndChangeFont {
     0% {
       transform: translateX(0px);
@@ -54,9 +67,7 @@ export const HeaderContainerLeft = styled.div`
       font-family: Arial, sans-serif;
     }
   }
-
-  :hover {
-    animation: floatAndChangeFont 4s none;
+  animation: floatAndChangeFont 4s none;
   }
 `;
 
@@ -66,14 +77,24 @@ export const HeaderContainerRigth = styled.div`
   gap: 20px;
   height: 3.5rem;
 
+  /* @keyframes moveRigthToZero {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+animation: moveRigthToZero 2s forwards; */
+
   h1 {
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 10px;
     height: 100%;
-
-    cursor: default;
+    cursor: default;    
 
     :hover {
       transition: 0.4s;
@@ -87,6 +108,17 @@ export const HeaderContainerRigth = styled.div`
 export const HeaderContainerRigthMobile = styled.div`
   display: flex;
   padding-right: 0.3rem;
+
+  /* @keyframes moveRigthToZero {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+animation: moveRigthToZero 2s forwards; */
 
   img {
     width: 1.875rem;
