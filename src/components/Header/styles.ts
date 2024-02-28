@@ -21,7 +21,7 @@ export const GlobalHeaderContainer = styled.header`
 
   :hover {
     transition: 1.5s linear;
-    background: rgba(160, 0, 17, 0.9);;
+    background: rgba(160, 0, 17, 0.9);
   }
 `;
 
@@ -77,7 +77,7 @@ export const HeaderContainerRigth = styled.div`
 
     :hover {
       transition: 0.4s;
-      background: rgb(35,35,35);
+      background: rgb(35, 35, 35);
       border-radius: 7px 0px 7px 0px;
       border-bottom: 5px solid white;
     }

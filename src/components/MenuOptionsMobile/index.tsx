@@ -5,6 +5,7 @@ import {
   MobileConfigGlobalContainer,
 } from "./styles";
 import { PortfolioContext } from "../../contexts/PortfolioContext";
+import { X } from "phosphor-react";
 
 export const MenuOptionsMobile = () => {
 
@@ -19,7 +20,7 @@ export const MenuOptionsMobile = () => {
         <h2>Quem sou eu</h2>
         <h2>Contatos</h2>
         <h2>Projetos</h2>
-        <h2 onClick={disableMobileOptions}>Sair</h2>
+        <X onClick={disableMobileOptions} size={32} />
       </MobileConfigContainer>
     </MobileConfigGlobalContainer>
   );
