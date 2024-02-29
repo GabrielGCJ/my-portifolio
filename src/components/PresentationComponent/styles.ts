@@ -8,7 +8,7 @@ export const PresentationComponentContainer = styled.div`
   width: 100%;
 `;
 
-export const WallpaperLayerContainer = styled.div`
+export const WallpaperLayerContainer = styled.style`
   position: absolute;
   top: 0;
   left: 0;
@@ -56,7 +56,7 @@ export const WallpaperLayerContainer = styled.div`
   height: 100vh;
   width: 100%;
 
-  background: url(${img});
+  /* background: url(${img}); */
   transform: rotate(180deg);
   background-size: 400%;
   background-position: center;

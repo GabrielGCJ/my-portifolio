@@ -10,10 +10,18 @@ import {
   TercearyRing,
 } from "./styles";
 
+import img from "../../assents/pattern-randomized.svg";
+
 export const PresentationComponent = () => {
+  const estiloDoFundo = {
+    backgroundImage: `url('${img}')`,
+    backgroundRepeat: "no-repeat",
+    backgroundAttachment: "fixed",
+    backgroundSize: "400%",
+  };
   return (
     <PresentationComponentContainer>
-      <WallpaperLayerContainer />
+      <WallpaperLayerContainer style={estiloDoFundo}></WallpaperLayerContainer>
       <BlurLayerContainer />
       <ProfessionLayerContainer>
         <h1 className="left">Full-Stack</h1>
@@ -30,7 +38,7 @@ export const PresentationComponent = () => {
       <RotatingRing>
         <SecundaryRing />
       </RotatingRing>
-      
+
       <RotatingRing>
         <TercearyRing />
       </RotatingRing>
