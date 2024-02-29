@@ -56,7 +56,7 @@ export const WallpaperLayerContainer = styled.div`
   height: 100vh;
   width: 100%;
 
-  background-image: url(${img});
+  background: url(${img})!important;
   transform: rotate(180deg);
   background-size: 400%;
   background-position: center;
