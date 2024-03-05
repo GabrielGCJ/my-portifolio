@@ -5,6 +5,7 @@ import { WhoAmI } from "../../components/WhoAmI";
 import { HomeContainer } from "./styles";
 import { PortfolioContext } from "../../contexts/PortfolioContext";
 import { MenuOptionsMobile } from "../../components/MenuOptionsMobile";
+import { SliderComponent } from "../../components/SliderComponent";
 
 export function HomePage() {
   const { menuMobileOptions, widthScream } = useContext(PortfolioContext);
@@ -17,6 +18,7 @@ export function HomePage() {
         <MenuOptionsMobile />
       ) : null}
       <WhoAmI />
+      <SliderComponent/>
     </HomeContainer>
   );
 }
