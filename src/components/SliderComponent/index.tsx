@@ -2,16 +2,16 @@ import { SliderComponentContainer } from "./styles";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 import 'swiper/css/navigation';
-// import 'swiper/less/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import "swiper/css";
+import 'swiper/less/navigation';
 // import "swiper/swiper-bundle.min.css"
 export const SliderComponent = () => {
   return (
     <SliderComponentContainer>
       <Swiper
-      modules={[Navigation, Pagination, Scrollbar, A11y]}
+        modules={[Navigation, Pagination, Scrollbar, A11y]}
         spaceBetween={50}
         slidesPerView={3}
         navigation
