@@ -1,4 +1,4 @@
-import { SliderComponentContainer } from "./styles";
+import { SliderComponentContainer, SliderAndTextComponent, SliderComponentGlobalContainer } from "./styles";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 import 'swiper/css/navigation';
@@ -9,6 +9,9 @@ import 'swiper/less/navigation';
 // import "swiper/swiper-bundle.min.css"
 export const SliderComponent = () => {
   return (
+    <SliderComponentGlobalContainer>
+      <h1>Projetos</h1>
+    <SliderAndTextComponent>
     <SliderComponentContainer>
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y]}
@@ -44,15 +47,17 @@ export const SliderComponent = () => {
             alt=""
           />
         </SwiperSlide>
-        <SwiperSlide>
+        {/* <SwiperSlide>
           <img
             src="https://github.com/GabrielGCJ/d-03-react-js-ts-rocketseat-git-hub-blog/assets/91347602/292b40e4-667a-4958-b00d-d5da2c697a96"
             alt=""
           />
-        </SwiperSlide>
-        ...
+        </SwiperSlide> */}
+        {/* ... */}
       </Swiper>
-      //{" "}
+      {/* //{" "} */}
     </SliderComponentContainer>
+            </SliderAndTextComponent>
+            </SliderComponentGlobalContainer>
   );
 };
