@@ -6,7 +6,7 @@ export const WhoAmIContainer = styled.div`
   justify-content: center;
   align-items: center;
   background-color: rgb(32, 32, 32);
-  width: 100vw;
+  width: 100%;
   height: 150%;
   padding: 10vw;
   position: relative;
