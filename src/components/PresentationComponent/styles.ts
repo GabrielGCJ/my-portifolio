@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import img from "../../assents/pattern-randomized.svg";
+// import img from "../../assents/pattern-randomized.svg";
+import img from "../../assents/moon.jpg"
 
 export const PresentationComponentContainer = styled.div`
   display: flex;
