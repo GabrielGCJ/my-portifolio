@@ -185,16 +185,34 @@ export const ImageAndTextContainer = styled.div`
   }
 `;
 
-export const TextContainer = styled.div`
+export const TextAndButtonContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 2rem;
   z-index: 5;
-  /* font-size: calc(1vw + 1vh); */
   font-size: 1rem;
-
   color: white;
-  flex-direction: column;
 
-  /* background:red ; */
+  a {
+    text-decoration: none;
+  }
+`;
+
+export const ButtonCv = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid red;
+  border-radius: 10px;
+  width: 100%;
+  height: 5vw;
+  min-height: 3rem ;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 1.5rem;
+
+  :hover {
+    background-color: rgba(102, 0, 17, 0.5);
+    transition: 0.7s;
+  }
 `;

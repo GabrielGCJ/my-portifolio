@@ -1,13 +1,16 @@
+import img from "../../assents/perfil-image.jpg";
+import cv from "../../assents/cv/cv-gabriel-jorge.pdf";
 import {
   BlurLayerWhoAmIContainer,
+  ButtonCv,
   ImageAndTextContainer,
   ImageContainer,
-  TextContainer,
+  TextAndButtonContainer,
   WallpaperWhoAmILayerContainer1,
   WallpaperWhoAmILayerContainer2,
   WhoAmIContainer,
 } from "./styles";
-import img from "../../assents/perfil-image.jpg";
+
 export const WhoAmI = () => {
   return (
     <WhoAmIContainer>
@@ -19,7 +22,7 @@ export const WhoAmI = () => {
           <img src={img} alt="" />
         </ImageContainer>
 
-        <TextContainer>
+        <TextAndButtonContainer>
           <h1>Sobre mim</h1>
           <p>
             Sou um apaixonado por tecnologia desde pequeno. Desde muito novo,
@@ -53,7 +56,12 @@ export const WhoAmI = () => {
             Em Resumo, Eu amo aprender e trocar experiências com as pessoas ao
             meu redor pois acredito que só assim podemos mudar o mundo.
           </p>
-        </TextContainer>
+          <a href={cv} download="cv-gabriel-jorge.pdf">
+            <ButtonCv>
+              <strong>Baixar Curriculo em PDF</strong>
+            </ButtonCv>
+          </a>
+        </TextAndButtonContainer>
       </ImageAndTextContainer>
     </WhoAmIContainer>
   );
