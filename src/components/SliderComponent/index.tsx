@@ -1,11 +1,14 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
+import { useContext, useEffect, useState } from "react";
+import { PortfolioContext } from "../../contexts/PortfolioContext";
+
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "swiper/css";
 import "swiper/less/navigation";
-// import "swiper/swiper-bundle.min.css"
+
 import {
   SliderComponentContainer,
   SliderAndTextComponent,
@@ -13,6 +16,17 @@ import {
 } from "./styles";
 
 export const SliderComponent = () => {
+  const { widthScream } = useContext(PortfolioContext);
+  const [slidesNumber, setSlidesNumber] = useState(0);
+
+  useEffect(() => {
+    if (widthScream <= 750) {
+      setSlidesNumber(1);
+    } else {
+      setSlidesNumber(3);
+    }
+  }, [widthScream]);
+
   return (
     <SliderComponentGlobalContainer>
       <h1>Projetos</h1>
@@ -21,12 +35,12 @@ export const SliderComponent = () => {
           <Swiper
             modules={[Navigation, Pagination, Scrollbar, A11y]}
             spaceBetween={50}
-            slidesPerView={3}
+            slidesPerView={slidesNumber}
             navigation
             pagination={{ clickable: true }}
             scrollbar={{ draggable: true }}
-            onSlideChange={() => console.log("slide change")}
-            onSwiper={(swiper) => console.log(swiper)}
+            // onSlideChange={() => console.log("slide change")}
+            // onSwiper={(swiper) => console.log(swiper)}
           >
             <SwiperSlide>
               <a
@@ -84,9 +98,7 @@ export const SliderComponent = () => {
                 />
               </a>
             </SwiperSlide>
-            {/* ... */}
           </Swiper>
-          {/* //{" "} */}
         </SliderComponentContainer>
       </SliderAndTextComponent>
     </SliderComponentGlobalContainer>

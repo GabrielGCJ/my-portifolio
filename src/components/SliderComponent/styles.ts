@@ -6,6 +6,8 @@ export const SliderComponentGlobalContainer = styled.div`
   background: black;
   color: white;
   gap: 1rem;
+  padding-bottom: 2rem;
+  gap: 2rem;
 
   h1 {
     font-size: 2rem;
@@ -32,5 +34,9 @@ export const SliderComponentContainer = styled.div`
   img {
     width: 25vw;
     border-radius: 5%;
+
+    @media (max-width: 750px) {
+      width: 80vw;
+    }
   }
 `;
