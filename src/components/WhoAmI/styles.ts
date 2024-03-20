@@ -1,5 +1,7 @@
 import styled from "styled-components";
-import img from "../../assents/pattern-randomized.svg";
+import img from "../../assents/texture.jpg"
+// import img from "../../assents/pattern-randomized.svg";
+
 
 export const WhoAmIContainer = styled.div`
   display: flex;
