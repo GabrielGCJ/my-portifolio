@@ -51,7 +51,7 @@ export const LateralMenuContainer = styled.div`
   animation: moveLeftToZero 2s forwards;
 
   /* A baixo estamos aplicando a animação de ajuste de cores apenas para imagens SVG */
-  img[src$=".svg"] {
+  /* img[src$=".svg"] {
     animation: adjustSvgColors 2s forwards;
-  }
+  } */
 `;
