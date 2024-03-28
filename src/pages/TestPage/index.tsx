@@ -1,9 +1,13 @@
-import { WhatDoIDo } from "../../components/WhatDoIDo"
+// import { WhatDoIDo } from "../../components/WhatDoIDo"
+
+import { Contact } from "../../components/Contact"
+import { TestContainer } from "./styles"
 
 export const TestPage = () => {
     return(
-        <div>
-            <WhatDoIDo/>
-        </div>
+        <TestContainer>
+            {/* <WhatDoIDo/> */}
+            <Contact/>
+        </TestContainer>
     )
 }

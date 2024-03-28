@@ -96,12 +96,40 @@ export const NameInput = styled(ImputProps)``;
 export const EmailInput = styled(ImputProps)``;
 export const TelephoneInput = styled(ImputProps)``;
 export const DetailsInput = styled(ImputProps)`
-  height: 10rem;
+  height: 7rem;
 
   ::placeholder {
     padding: 10px;
     position: absolute;
     top: 0;
     left: 0;
+  }
+`;
+
+export const OtherContactsContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 95%;
+  height: 9rem;
+  background: rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+`;
+
+export const ContactLinksContainer = styled.div`
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  /* gap: 2rem; */
+
+  img {
+    width: 2vw;
+    transition: 0.25s linear;
+
+    :hover {
+      width: 3vw;
+    }
   }
 `;
