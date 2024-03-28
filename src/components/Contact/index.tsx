@@ -64,7 +64,7 @@ export const Contact = () => {
             <button type="submit">Enviar</button>
           </InputsContainer>
           <OtherContactsContainer>
-            <h2>Outros Contatos</h2>
+            <h3>Outros Contatos</h3>
             <ContactLinksContainer>
               <a href="https://github.com/GabrielGCJ" target="_blank">
                 <img className="whiteIcon" src={gitImage} alt="" />
