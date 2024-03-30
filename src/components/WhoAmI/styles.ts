@@ -1,7 +1,8 @@
 import styled from "styled-components";
-import img from "../../assents/texture.jpg"
+import img from "../../assents/texture.jpg";
 // import img from "../../assents/pattern-randomized.svg";
-
+import img2 from "../../assents/perfil-image.jpg";
+import img3 from "../../assents/anime-profile.jpg";
 
 export const WhoAmIContainer = styled.div`
   display: flex;
@@ -160,18 +161,41 @@ export const ImageContainer = styled.div`
   justify-content: center;
   align-items: center;
   z-index: 6;
+  min-width: 25vw;
+  width: 25vw;
+  height: 25vw;
+  border-radius: 30%;
+  border: 3px solid rgba(160, 0, 17, 0.9);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(${img3});
 
-  img {
-    border: 3px solid rgba(160, 0, 17, 0.9);
-    width: 25vw;
-    height: 25vw;
-    border-radius: 30%;
-    object-fit: cover;
-
-    @media (max-width: 800px) {
-      width: 50vw;
-      height: 50vw;
+  @keyframes updateImage {
+    0% {
+      background-image: url(${img2});
     }
+    80% {
+      background-image: url(${img2});
+    }
+    100% {
+      background-image: url(${img3});
+    }
+  }
+  animation: updateImage 5s none;
+
+  :hover {
+    background-image: url(${img2});
+    transition: 0.3s;
+  }
+  :active {
+    background-image: url(${img2});
+    transition: 0.3s;
+  }
+
+  @media (max-width: 800px) {
+    width: 50vw;
+    height: 50vw;
   }
 `;
 
@@ -208,7 +232,7 @@ export const ButtonCv = styled.button`
   border-radius: 10px;
   width: 100%;
   height: 5vw;
-  min-height: 3rem ;
+  min-height: 3rem;
   background-color: rgba(0, 0, 0, 0.5);
   color: white;
   font-size: 1.5rem;
