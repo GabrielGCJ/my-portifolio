@@ -1,4 +1,3 @@
-// import img from "../.image.jpg"./assents/perfil-
 import cv from "../../assents/cv/cv-gabriel-jorge.pdf";
 import {
   BlurLayerWhoAmIContainer,
@@ -18,10 +17,7 @@ export const WhoAmI = () => {
       <WallpaperWhoAmILayerContainer2 />
       <BlurLayerWhoAmIContainer />
       <ImageAndTextContainer>
-        <ImageContainer>
-          {/* <img src={img} alt="" /> */}
-        </ImageContainer>
-
+        <ImageContainer/>
         <TextAndButtonContainer>
           <h1>Sobre mim</h1>
           <p>
