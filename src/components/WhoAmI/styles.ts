@@ -182,7 +182,7 @@ export const ImageContainer = styled.div`
       background-image: url(${img3});
     }
   }
-  animation: updateImage 5s none;
+  animation: updateImage 13s none;
 
   :hover {
     background-image: url(${img2});
