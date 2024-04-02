@@ -15,16 +15,18 @@ import {
   OtherContactsContainer,
   TelephoneInput,
 } from "./styles";
+
 // import { useContext } from "react";
 // import { PortfolioContext, infoContact } from "../../contexts/PortfolioContext";
 
 export const Contact = () => {
   // const { setinfo } = useContext(PortfolioContext);
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, reset } = useForm();
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const handleCreateNewBuy = async (data: any) => {
     console.log(data);
+    reset()
     // setinfo(data);
   };
 
