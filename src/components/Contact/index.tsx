@@ -61,7 +61,7 @@ export const Contact = () => {
               id="details"
               // name="details"
               placeholder="Detalhes"
-              {...register("details", { required: true })}
+              {...register("details", { required: false })}
             />
             <button type="submit">Enviar</button>
           </InputsContainer>

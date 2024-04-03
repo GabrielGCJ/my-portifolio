@@ -4,6 +4,7 @@ export const ContactGlobalContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 50rem;
   width: 100%;
   height: 100vh;
   flex-direction: row;
@@ -13,7 +14,8 @@ export const ContactGlobalContainer = styled.div`
   background-color: black;
   gap: 20rem;
 
-  h2,h3 {
+  h2,
+  h3 {
     color: white;
     margin: 1rem;
     cursor: default;
@@ -40,7 +42,8 @@ export const InputsContainer = styled.div`
   background: rgba(0, 0, 0, 0.3);
   width: 95%;
   height: 65%;
-  gap: 2rem;
+  gap: 1rem;
+  padding: 1rem 0 1rem 0;
   flex-direction: column;
   border-radius: 1%;
 
@@ -115,10 +118,13 @@ export const OtherContactsContainer = styled.div`
   height: 12rem;
   background: rgba(0, 0, 0, 0.2);
   margin-top: 20px;
-  gap: 1rem ;
+  gap: 1rem;
+  padding: 1rem 0 1rem 0;
 `;
 
 export const ContactLinksContainer = styled.div`
+  padding: 1rem 0 1rem 0;
+  background-color: rgba(160, 90, 90, 0.4);
   display: flex;
   justify-content: space-around;
   align-items: center;
