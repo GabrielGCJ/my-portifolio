@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { LateralMenu } from "../../components/LateralMenu";
 import { PresentationComponent } from "../../components/PresentationComponent";
 import { WhoAmI } from "../../components/WhoAmI";
@@ -9,18 +9,19 @@ import { SliderComponent } from "../../components/SliderComponent";
 import { Contact } from "../../components/Contact";
 
 export function HomePage() {
-  const [loaded, setLoaded] = useState(false);
+  const [loading, setLoading] = useState(true);
   const { menuMobileOptions, widthScream } = useContext(PortfolioContext);
   const larguraLimite = 750;
 
-  window.onload = () => {
-    setLoaded(true);
-  };
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+  }, []);
 
-  if (!loaded) {
+  if (loading) {
     return <div>Carregando...</div>;
   }
-
 
   return (
     <HomeContainer>
@@ -30,8 +31,8 @@ export function HomePage() {
         <MenuOptionsMobile />
       ) : null}
       <WhoAmI />
-      <SliderComponent/>
-      <Contact/>
+      <SliderComponent />
+      <Contact />
     </HomeContainer>
   );
 }
