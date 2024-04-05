@@ -8,7 +8,7 @@ export const ContactGlobalContainer = styled.div`
   width: 100%;
   height: 100vh;
   flex-direction: row;
-
+  overflow: hidden;
   font-family: ${({ theme }) => theme.fonts.roboto};
 
   background-color: black;
@@ -33,6 +33,18 @@ export const ContactContainer = styled.div`
   border-radius: 1%;
   padding: 1rem;
   width: 40rem;
+
+  @keyframes moveUp {
+    from {
+      transform: translateY(50%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  animation: moveUp 1.3s ease-out 1;
 `;
 
 export const InputsContainer = styled.div`
@@ -138,5 +150,47 @@ export const ContactLinksContainer = styled.div`
     :hover {
       width: 3vw;
     }
+  }
+
+  .cont1 {
+    @keyframes moveRight {
+      from {
+        transform: translateX(-200%);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+    animation: moveRight 1.3s ease-out 1;
+  }
+
+  .cont2 {
+    @keyframes moveUp {
+      from {
+        transform: translateY(200%);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    animation: moveUp 1.3s ease-out 1;
+  }
+
+  .cont3 {
+    @keyframes moveLeft {
+      from {
+        transform: translateX(200%);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+    animation: moveLeft 1.3s ease-out 1;
   }
 `;

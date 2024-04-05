@@ -26,7 +26,7 @@ export const Contact = () => {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const handleCreateNewBuy = async (data: any) => {
     console.log(data);
-    reset()
+    reset();
     // setinfo(data);
   };
 
@@ -68,25 +68,47 @@ export const Contact = () => {
           <OtherContactsContainer>
             <h3>Outros Contatos</h3>
             <ContactLinksContainer>
-              <a href="https://github.com/GabrielGCJ" target="_blank">
+              <a
+                className="cont1"
+                href="https://github.com/GabrielGCJ"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <img className="whiteIcon" src={gitImage} alt="" />
               </a>
 
-              <a href="https://www.instagram.com/gb.j_dev/" target="_blank">
+              <a
+                className="cont1"
+                href="https://www.instagram.com/gb.j_dev/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <img className="whiteIcon" src={instagramImage} alt="" />
               </a>
+
               <a
+                className="cont2"
                 href="https://www.linkedin.com/in/gabriel-jorge-67635b221/"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <img className="whiteIcon" src={linkedinImage} alt="" />
               </a>
-              <a href="https://wa.me/5521988436194" target="_blank">
+
+              <a
+                className="cont3"
+                href="https://wa.me/5521988436194"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <img className="whiteIcon" src={whatsappImage} alt="" />
               </a>
+
               <a
+                className="cont3"
                 href="https://open.spotify.com/user/ggcj.333?si=j5p0rC6TRpyt3OA3AtgHjQ&utm_source=copy-link"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <img className="whiteIcon" src={spotifyImage} alt="" />
               </a>
