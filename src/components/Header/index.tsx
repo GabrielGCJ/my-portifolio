@@ -15,8 +15,8 @@ export const Header = () => {
   const { activateMobileOptions, widthScream } = useContext(PortfolioContext);
   const [languageContainerActive, setLanguageContainerActive] = useState(false);
   const [aboutMeContainerActive, setAboutMeContainerActive] = useState(false);
-  // const [widthScream, setWidthScream] = useState(window.innerWidth);
   const larguraLimite = 750;
+  // const [widthScream, setWidthScream] = useState(window.innerWidth);
 
   // useEffect(() => {
   //   const handleResize = () => {
