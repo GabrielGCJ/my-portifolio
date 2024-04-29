@@ -34,7 +34,7 @@ export const ContactContainer = styled.div`
   padding: 1rem;
   width: 40rem;
 
-  @keyframes moveUp {
+  @keyframes moveUpContact {
     from {
       transform: translateY(50%);
       opacity: 0;
@@ -44,7 +44,7 @@ export const ContactContainer = styled.div`
       opacity: 1;
     }
   }
-  animation: moveUp 1.3s ease-out 1;
+  animation: moveUpContact 1.3s ease-out 1;
 `;
 
 export const InputsContainer = styled.div`
@@ -153,7 +153,7 @@ export const ContactLinksContainer = styled.div`
   }
 
   .cont1 {
-    @keyframes moveRight {
+    @keyframes moveRightContact {
       from {
         transform: translateX(-200%);
         opacity: 0;
@@ -163,11 +163,11 @@ export const ContactLinksContainer = styled.div`
         opacity: 1;
       }
     }
-    animation: moveRight 1.3s ease-out 1;
+    animation: moveRightContact 2s ease-out 1;
   }
 
   .cont2 {
-    @keyframes moveUp {
+    @keyframes moveUpContact {
       from {
         transform: translateY(200%);
         opacity: 0;
@@ -177,11 +177,11 @@ export const ContactLinksContainer = styled.div`
         opacity: 1;
       }
     }
-    animation: moveUp 1.3s ease-out 1;
+    animation: moveUpContact 2s ease-out 1;
   }
 
   .cont3 {
-    @keyframes moveLeft {
+    @keyframes moveLeftContact  {
       from {
         transform: translateX(200%);
         opacity: 0;
@@ -191,6 +191,6 @@ export const ContactLinksContainer = styled.div`
         opacity: 1;
       }
     }
-    animation: moveLeft 1.3s ease-out 1;
+    animation: moveLeftContact 2s ease-out 1;
   }
 `;
