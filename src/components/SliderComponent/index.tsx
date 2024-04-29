@@ -44,7 +44,8 @@ export const SliderComponent = () => {
           >
             <SwiperSlide>
               <a
-                href="https://github.com/GabrielGCJ/d-02-react-js-rocketseat-coffee-delivery"
+                // href="https://github.com/GabrielGCJ/d-02-react-js-rocketseat-coffee-delivery"
+                href="https://coffee-delivery.surge.sh/"
                 target="_blank"
               >
                 <img
@@ -55,7 +56,8 @@ export const SliderComponent = () => {
             </SwiperSlide>
             <SwiperSlide>
               <a
-                href="https://github.com/GabrielGCJ/p-02-react-js-rocketseat-timer"
+                // href="https://github.com/GabrielGCJ/p-02-react-js-rocketseat-timer"
+                href="https://gb-project-timer.surge.sh/"
                 target="_blank"
               >
                 <img
@@ -67,7 +69,8 @@ export const SliderComponent = () => {
 
             <SwiperSlide>
               <a
-                href="https://github.com/GabrielGCJ/d-03-react-js-ts-rocketseat-git-hub-blog"
+                // href="https://github.com/GabrielGCJ/d-03-react-js-ts-rocketseat-git-hub-blog"
+                href="git-hub-blog.surge.sh"
                 target="_blank"
               >
                 <img
@@ -78,7 +81,8 @@ export const SliderComponent = () => {
             </SwiperSlide>
             <SwiperSlide>
               <a
-                href="https://github.com/GabrielGCJ/p-01-react-js-rocketseat-ignite-feed"
+                // href="https://github.com/GabrielGCJ/p-01-react-js-rocketseat-ignite-feed"
+                href="https://gb-ignite-feed.surge.sh/"
                 target="_blank"
               >
                 <img
@@ -89,7 +93,8 @@ export const SliderComponent = () => {
             </SwiperSlide>
             <SwiperSlide>
               <a
-                href="https://github.com/GabrielGCJ/desafio-01-react-js-rocketseat"
+                // href="https://github.com/GabrielGCJ/desafio-01-react-js-rocketseat"
+                href="https://gb-todo-list.surge.sh/"
                 target="_blank"
               >
                 <img
