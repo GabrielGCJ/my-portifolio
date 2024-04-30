@@ -44,18 +44,6 @@ export const SliderComponent = () => {
           >
             <SwiperSlide>
               <a
-                // href="https://github.com/GabrielGCJ/d-02-react-js-rocketseat-coffee-delivery"
-                href="https://coffee-delivery.surge.sh/"
-                target="_blank"
-              >
-                <img
-                  src="https://github.com/GabrielGCJ/d-02-react-js-rocketseat-coffee-delivery/assets/91347602/deaa5363-4397-4a03-82e2-66b8974336d6"
-                  alt=""
-                />
-              </a>
-            </SwiperSlide>
-            <SwiperSlide>
-              <a
                 // href="https://github.com/GabrielGCJ/p-02-react-js-rocketseat-timer"
                 href="https://gb-project-timer.surge.sh/"
                 target="_blank"
@@ -66,7 +54,18 @@ export const SliderComponent = () => {
                 />
               </a>
             </SwiperSlide>
-
+            <SwiperSlide>
+              <a
+                // href="https://github.com/GabrielGCJ/d-02-react-js-rocketseat-coffee-delivery"
+                href="https://coffee-delivery.surge.sh/"
+                target="_blank"
+              >
+                <img
+                  src="https://github.com/GabrielGCJ/d-02-react-js-rocketseat-coffee-delivery/assets/91347602/deaa5363-4397-4a03-82e2-66b8974336d6"
+                  alt=""
+                />
+              </a>
+            </SwiperSlide>
             <SwiperSlide>
               <a
                 // href="https://github.com/GabrielGCJ/d-03-react-js-ts-rocketseat-git-hub-blog"
@@ -81,24 +80,24 @@ export const SliderComponent = () => {
             </SwiperSlide>
             <SwiperSlide>
               <a
-                // href="https://github.com/GabrielGCJ/p-01-react-js-rocketseat-ignite-feed"
-                href="https://gb-ignite-feed.surge.sh/"
-                target="_blank"
-              >
-                <img
-                  src="https://github.com/GabrielGCJ/projeto-01-react-js-rocketseat/assets/91347602/047a4b05-9ef7-413f-8ac5-a2585c7ad2d2"
-                  alt=""
-                />
-              </a>
-            </SwiperSlide>
-            <SwiperSlide>
-              <a
                 // href="https://github.com/GabrielGCJ/desafio-01-react-js-rocketseat"
                 href="https://gb-todo-list.surge.sh/"
                 target="_blank"
               >
                 <img
                   src="https://github.com/GabrielGCJ/desafio-01-react-js-rocketseat/assets/91347602/96cad20c-8c79-4fb0-b372-9a8b0031e496"
+                  alt=""
+                />
+              </a>
+            </SwiperSlide>
+            <SwiperSlide>
+              <a
+                // href="https://github.com/GabrielGCJ/p-01-react-js-rocketseat-ignite-feed"
+                href="https://gb-ignite-feed.surge.sh/"
+                target="_blank"
+              >
+                <img
+                  src="https://github.com/GabrielGCJ/projeto-01-react-js-rocketseat/assets/91347602/047a4b05-9ef7-413f-8ac5-a2585c7ad2d2"
                   alt=""
                 />
               </a>
