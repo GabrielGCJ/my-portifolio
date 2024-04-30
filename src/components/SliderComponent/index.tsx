@@ -70,7 +70,7 @@ export const SliderComponent = () => {
             <SwiperSlide>
               <a
                 // href="https://github.com/GabrielGCJ/d-03-react-js-ts-rocketseat-git-hub-blog"
-                href="git-hub-blog.surge.sh"
+                href="https://git-hub-blog.surge.sh"
                 target="_blank"
               >
                 <img
