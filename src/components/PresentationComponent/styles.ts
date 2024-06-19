@@ -1,5 +1,4 @@
 import styled from "styled-components";
-// import img from "../../assents/pattern-randomized.svg";
 import img from "../../assents/moon.jpg"
 
 export const PresentationComponentContainer = styled.div`
@@ -14,26 +13,6 @@ export const WallpaperLayerContainer = styled.div`
   top: 0;
   left: 0;
   z-index: 1;
-
-  /* @keyframes loop {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: -100% 0;
-  }
-}
-  display: flex;
-  height: 110vh;
-  width: 100%;
-
-  background: url(${img});
-  background-size: 200%; 
-  background-position: center; 
-
-  animation: loop 300s linear infinite;  */
-
-  /* ------- */
 
   @keyframes zoom {
     0% {
