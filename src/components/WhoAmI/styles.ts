@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import img from "../../assents/texture.jpg";
-// import img from "../../assents/pattern-randomized.svg";
 import img2 from "../../assents/perfil-image.jpg";
 import img3 from "../../assents/anime-profile.jpg";
 
@@ -40,26 +39,6 @@ export const WallpaperWhoAmILayerContainer1 = styled.div`
 
   animation: loop 300s linear infinite;
 
-  /* ------- */
-
-  /* @keyframes zoom {
-    0% {
-      background-size: 400%;
-    }
-    25% {
-      background-size: 350%;
-    }
-    50% {
-      background-size: 300%;
-    }
-    75% {
-      background-size: 200%;
-    }
-    100% {
-      background-size: 100%;
-    }
-  } */
-
   display: flex;
   height: 100vh;
   width: 100%;
@@ -68,7 +47,6 @@ export const WallpaperWhoAmILayerContainer1 = styled.div`
   transform: rotate(180deg);
   background-size: 400%;
   background-position: center;
-  /* animation: zoom 2s linear alternate-reverse;    */
 `;
 export const WallpaperWhoAmILayerContainer2 = styled.div`
   position: absolute;
@@ -94,26 +72,6 @@ export const WallpaperWhoAmILayerContainer2 = styled.div`
 
   animation: loop2 300s linear infinite;
 
-  /* ------- */
-
-  /* @keyframes zoom {
-    0% {
-      background-size: 400%;
-    }
-    25% {
-      background-size: 350%;
-    }
-    50% {
-      background-size: 300%;
-    }
-    75% {
-      background-size: 200%;
-    }
-    100% {
-      background-size: 100%;
-    }
-  } */
-
   display: flex;
   height: 100vh;
   width: 100%;
@@ -122,7 +80,6 @@ export const WallpaperWhoAmILayerContainer2 = styled.div`
   transform: rotate(180deg);
   background-size: 400%;
   background-position: center;
-  /* animation: zoom 2s linear alternate-reverse;    */
 `;
 
 export const BlurLayerWhoAmIContainer = styled.div`
