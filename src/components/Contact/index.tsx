@@ -4,6 +4,8 @@ import instagramImage from "../../assents/lateralMenu/instagram.svg";
 import linkedinImage from "../../assents/lateralMenu/linkedin.svg";
 import whatsappImage from "../../assents/lateralMenu/whatsapp.svg";
 import spotifyImage from "../../assents/lateralMenu/spotify.svg";
+import { useContext } from "react";
+import { PortfolioContext } from "../../contexts/PortfolioContext";
 import {
   ContactContainer,
   ContactGlobalContainer,
@@ -16,11 +18,8 @@ import {
   TelephoneInput,
 } from "./styles";
 
-// import { useContext } from "react";
-// import { PortfolioContext, infoContact } from "../../contexts/PortfolioContext";
-
 export const Contact = () => {
-  // const { setinfo } = useContext(PortfolioContext);
+  const { language } = useContext(PortfolioContext);
   const { register, handleSubmit, reset } = useForm();
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -34,39 +33,38 @@ export const Contact = () => {
     <form onSubmit={handleSubmit(handleCreateNewBuy)}>
       <ContactGlobalContainer>
         <ContactContainer>
-          <h2>Contato</h2>
+          <h2>{language === "portuguese" ? "Contato" : "Contact"}</h2>
           <InputsContainer>
             <NameInput
-              // style={{ color: 'white' }}
               id="name"
-              // name="name"
-              placeholder="Nome"
+              placeholder={language === "portuguese" ? "Nome" : "Name"}
               {...register("name", { required: true })}
             />
             <EmailInput
               id="email"
-              // name="email"
               type="email"
               placeholder="Email"
               {...register("email", { required: true })}
             />
             <TelephoneInput
               id="telephone"
-              // name="telephone"
               type="tel"
-              placeholder="Telefone"
+              placeholder={language === "portuguese" ? "Telefone" : "Telephone"}
               {...register("telephone", { required: true })}
             />
             <DetailsInput
               id="details"
-              // name="details"
-              placeholder="Detalhes"
+              placeholder={language === "portuguese" ? "Detalhes" : "Details"}
               {...register("details", { required: false })}
             />
-            <button type="submit">Enviar</button>
+            <button type="submit">
+              {language === "portuguese" ? "Enviar" : "Submit"}
+            </button>
           </InputsContainer>
           <OtherContactsContainer>
-            <h3>Outros Contatos</h3>
+            <h3>
+              {language === "portuguese" ? "Outros Contatos" : "Other contacts"}
+            </h3>
             <ContactLinksContainer>
               <a
                 className="cont1"

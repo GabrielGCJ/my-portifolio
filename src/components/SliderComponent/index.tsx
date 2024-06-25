@@ -16,7 +16,7 @@ import {
 } from "./styles";
 
 export const SliderComponent = () => {
-  const { widthScream } = useContext(PortfolioContext);
+  const { widthScream, language } = useContext(PortfolioContext);
   const [slidesNumber, setSlidesNumber] = useState(0);
 
   useEffect(() => {
@@ -29,7 +29,7 @@ export const SliderComponent = () => {
 
   return (
     <SliderComponentGlobalContainer>
-      <h1>Projetos</h1>
+      <h1>{language === "portuguese" ? "Projetos" : "Projects"}</h1>
       <SliderAndTextComponent>
         <SliderComponentContainer>
           <Swiper
@@ -39,12 +39,9 @@ export const SliderComponent = () => {
             navigation
             pagination={{ clickable: true }}
             scrollbar={{ draggable: true }}
-            // onSlideChange={() => console.log("slide change")}
-            // onSwiper={(swiper) => console.log(swiper)}
           >
             <SwiperSlide>
               <a
-                // href="https://github.com/GabrielGCJ/p-02-react-js-rocketseat-timer"
                 href="https://gb-project-timer.surge.sh/"
                 target="_blank"
               >
@@ -56,7 +53,7 @@ export const SliderComponent = () => {
             </SwiperSlide>
             <SwiperSlide>
               <a
-                // href="https://github.com/GabrielGCJ/d-02-react-js-rocketseat-coffee-delivery"
+
                 href="https://coffee-delivery.surge.sh/"
                 target="_blank"
               >
@@ -68,8 +65,7 @@ export const SliderComponent = () => {
             </SwiperSlide>
             <SwiperSlide>
               <a
-                // href="https://github.com/GabrielGCJ/d-03-react-js-ts-rocketseat-git-hub-blog"
-                href="https://git-hub-blog.surge.sh"
+              
                 target="_blank"
               >
                 <img
@@ -80,7 +76,6 @@ export const SliderComponent = () => {
             </SwiperSlide>
             <SwiperSlide>
               <a
-                // href="https://github.com/GabrielGCJ/desafio-01-react-js-rocketseat"
                 href="https://gb-todo-list.surge.sh/"
                 target="_blank"
               >
@@ -92,7 +87,6 @@ export const SliderComponent = () => {
             </SwiperSlide>
             <SwiperSlide>
               <a
-                // href="https://github.com/GabrielGCJ/p-01-react-js-rocketseat-ignite-feed"
                 href="https://gb-ignite-feed.surge.sh/"
                 target="_blank"
               >
