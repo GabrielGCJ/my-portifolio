@@ -4,7 +4,10 @@ interface CreateContextType {
   menuMobileOptions: boolean;
   activateMobileOptions: () => void
   disableMobileOptions: () => void
+  changeLanguageToPortuguese: () => void
+  changeLanguageToEnglish: () => void
   widthScream: number
+  language: string
 }
 
 export const PortfolioContext = createContext({} as CreateContextType);
@@ -17,6 +20,7 @@ export const PortfolioContextProvider = ({
   children,
 }: PortfolioContextProviderProps) => {
   const [menuMobileOptions, setMenuMobileOptions] = useState(false);
+  const [ language, setLanguage ] = useState("portuguese")
   const [widthScream, setWidthScream] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -30,6 +34,15 @@ export const PortfolioContextProvider = ({
       window.removeEventListener("resize", handleResize);
     };
   }, [widthScream]);
+
+  const changeLanguageToPortuguese = () => {
+    setLanguage("portuguese")
+  }
+
+  const changeLanguageToEnglish = () => {
+    setLanguage("english")
+  }
+
 
 const activateMobileOptions = () => {
   setMenuMobileOptions(true)
@@ -46,7 +59,10 @@ const disableMobileOptions = () => {
         menuMobileOptions,
         activateMobileOptions,
         disableMobileOptions,
-        widthScream
+        widthScream,
+        changeLanguageToPortuguese,
+        changeLanguageToEnglish,
+        language
       }}
     >
       {children}
