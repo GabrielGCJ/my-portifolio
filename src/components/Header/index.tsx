@@ -12,7 +12,8 @@ import {
 import { List } from "phosphor-react";
 
 export const Header = () => {
-  const { activateMobileOptions, widthScream } = useContext(PortfolioContext);
+  const { activateMobileOptions, widthScream, language } =
+    useContext(PortfolioContext);
   const [languageContainerActive, setLanguageContainerActive] = useState(false);
   const [aboutMeContainerActive, setAboutMeContainerActive] = useState(false);
   const larguraLimite = 750;
@@ -31,18 +32,20 @@ export const Header = () => {
               onMouseEnter={() => setLanguageContainerActive(true)}
               onMouseLeave={() => setLanguageContainerActive(false)}
             >
-              <h1>Idioma</h1>
+              <h1>{language === "portuguese" ? "Idioma" : "Language"}</h1>
               {languageContainerActive && <MenuLanguage />}
             </div>
             <div
               onMouseEnter={() => setAboutMeContainerActive(true)}
               onMouseLeave={() => setAboutMeContainerActive(false)}
             >
-              <h1>Quem sou eu</h1>
+              <h1>
+                {language === "portuguese" ? "Quem sou eu?" : "Who am I?"}
+              </h1>
               {aboutMeContainerActive && <MenuAboutMe />}
             </div>
-            <h1>Projetos</h1>
-            <h1>Contato</h1>
+            <h1>{language === "portuguese" ? "Projetos" : "Projects"}</h1>
+            <h1>{language === "portuguese" ? "Contato" : "Contact"}</h1>
           </HeaderContainerRigth>
         ) : (
           <HeaderContainerRigthMobile onClick={activateMobileOptions}>
