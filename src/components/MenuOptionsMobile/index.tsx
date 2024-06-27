@@ -9,15 +9,30 @@ import { XCircle } from "phosphor-react";
 
 export const MenuOptionsMobile = () => {
   const {
+    language,
     disableMobileOptions,
     optionsMenu,
     changeOptionsMenuLanguage,
     changeOptionsMenuInitial,
     changeOptionsMenuWhoAmI,
+    changeLanguageToPortuguese,
+    changeLanguageToEnglish,
   } = useContext(PortfolioContext);
 
   const changeInitial = () => {
     disableMobileOptions();
+    changeOptionsMenuInitial();
+  };
+
+  const changeLanguagePortuguese = () => {
+    disableMobileOptions();
+    changeLanguageToPortuguese();
+    changeOptionsMenuInitial();
+  };
+
+  const changeLanguageEnglish = () => {
+    disableMobileOptions();
+    changeLanguageToEnglish();
     changeOptionsMenuInitial();
   };
 
@@ -27,23 +42,29 @@ export const MenuOptionsMobile = () => {
       {optionsMenu === "initial" ? (
         <MobileConfigContainer>
           <h2>Home</h2>
-          <h2 onClick={changeOptionsMenuLanguage}>Idioma</h2>
-          <h2 onClick={changeOptionsMenuWhoAmI}>Quem sou eu</h2>
-          <h2>Contatos</h2>
-          <h2>Projetos</h2>
+          <h2 onClick={changeOptionsMenuLanguage}>
+            {language === "portuguese" ? "Idioma" : "Language"}
+          </h2>
+          <h2 onClick={changeOptionsMenuWhoAmI}>
+            {language === "portuguese" ? "Quem sou eu" : "Who am I"}
+          </h2>
+          <h2>{language === "portuguese" ? "Contatos" : "Contacts"}</h2>
+          <h2>{language === "portuguese" ? "Projetos" : "Projects"}</h2>
           <XCircle onClick={disableMobileOptions} size={33} weight="bold" />
         </MobileConfigContainer>
       ) : optionsMenu === "language" ? (
         <MobileConfigContainer>
-          <h2>Portugues</h2>
-          <h2>English</h2>
+          <h2 onClick={changeLanguagePortuguese}>Portugues</h2>
+          <h2 onClick={changeLanguageEnglish}>English</h2>
           <XCircle onClick={changeInitial} size={33} weight="bold" />
         </MobileConfigContainer>
       ) : optionsMenu === "whoAmI" ? (
         <MobileConfigContainer>
-          <h2>Sobre mim</h2>
-          <h2>O que eu faço</h2>
-          <h2>Educação</h2>
+          <h2>{language === "portuguese" ? "Sobre mim" : "About me"}</h2>
+          <h2>
+            {language === "portuguese" ? "O que eu faço" : "What do I do"}
+          </h2>
+          <h2>{language === "portuguese" ? "Educação" : "Education"}</h2>
           <XCircle onClick={changeInitial} size={33} weight="bold" />
         </MobileConfigContainer>
       ) : null}
