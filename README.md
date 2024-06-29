@@ -1,6 +1,6 @@
 # Portfolio
 
-Esta apresentação está em estágio de desenvolvimento e apresenta uma série de projetos que desenvolvi. O objetivo desses projetos é tanto o meu aprendizado e desenvolvimento pessoal quanto a criação de soluções inovadoras para diversos problemas.
+Bem-vindo ao meu portfólio em desenvolvimento! Aqui você encontrará uma coleção de projetos que desenvolvi, voltados tanto para o meu crescimento pessoal e aprendizado quanto para a criação de soluções inovadoras para diversos desafios.
 
 
 ### Para rodar o projeto:
