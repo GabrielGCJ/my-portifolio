@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { keyframes } from "@emotion/react";
 
 export const ContactGlobalContainer = styled.div`
   display: flex;
@@ -141,7 +142,6 @@ export const ContactLinksContainer = styled.div`
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  /* gap: 2rem; */
 
   img {
     width: 2rem;
@@ -151,24 +151,21 @@ export const ContactLinksContainer = styled.div`
       width: 3vw;
     }
   }
+`;
 
-  .cont1 {
-    @keyframes moveRightContact {
-      from {
-        transform: translateX(-200%);
+export const customAnimationGitInst = keyframes`
+   from {
+        transform: translateX(-300%);
         opacity: 0;
       }
       to {
         transform: translateX(0);
         opacity: 1;
       }
-    }
-    animation: moveRightContact 2s ease-out 1;
-  }
+`;
 
-  .cont2 {
-    @keyframes moveUpContact {
-      from {
+export const customAnimationLinkedin = keyframes`
+   from {
         transform: translateY(200%);
         opacity: 0;
       }
@@ -176,21 +173,15 @@ export const ContactLinksContainer = styled.div`
         transform: translateY(0);
         opacity: 1;
       }
-    }
-    animation: moveUpContact 2s ease-out 1;
-  }
+`;
 
-  .cont3 {
-    @keyframes moveLeftContact  {
-      from {
-        transform: translateX(200%);
+export const customAnimationWhatsAppSpotify = keyframes`
+   from {
+        transform: translateX(300%);
         opacity: 0;
       }
       to {
         transform: translateX(0);
         opacity: 1;
       }
-    }
-    animation: moveLeftContact 2s ease-out 1;
-  }
 `;
