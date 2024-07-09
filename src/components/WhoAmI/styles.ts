@@ -2,6 +2,7 @@ import styled from "styled-components";
 import img from "../../assents/texture.jpg";
 import img2 from "../../assents/perfil-image.jpg";
 import img3 from "../../assents/anime-profile.jpg";
+import { keyframes } from "@emotion/react";
 
 export const WhoAmIContainer = styled.div`
   display: flex;
@@ -198,4 +199,15 @@ export const ButtonCv = styled.button`
     background-color: rgba(102, 0, 17, 0.5);
     transition: 0.7s;
   }
+`;
+
+export const customAnimationPDF = keyframes`
+   from {
+        transform: translateY(100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
 `;
