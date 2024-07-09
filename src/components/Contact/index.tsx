@@ -6,7 +6,7 @@ import whatsappImage from "../../assents/lateralMenu/whatsapp.svg";
 import spotifyImage from "../../assents/lateralMenu/spotify.svg";
 import { useContext } from "react";
 import { PortfolioContext } from "../../contexts/PortfolioContext";
-import { Zoom } from "react-awesome-reveal";
+import { Zoom, Reveal } from "react-awesome-reveal";
 import {
   ContactContainer,
   ContactGlobalContainer,
@@ -17,6 +17,9 @@ import {
   NameInput,
   OtherContactsContainer,
   TelephoneInput,
+  customAnimationGitInst,
+  customAnimationLinkedin,
+  customAnimationWhatsAppSpotify,
 } from "./styles";
 
 export const Contact = () => {
@@ -65,6 +68,8 @@ export const Contact = () => {
                 {language === "portuguese" ? "Enviar" : "Submit"}
               </button>
             </InputsContainer>
+
+         
             <OtherContactsContainer>
               <h3>
                 {language === "portuguese"
@@ -72,52 +77,53 @@ export const Contact = () => {
                   : "Other contacts"}
               </h3>
               <ContactLinksContainer>
-                <a
-                  className="cont1"
-                  href="https://github.com/GabrielGCJ"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img className="whiteIcon" src={gitImage} alt="" />
-                </a>
+                <Reveal keyframes={customAnimationGitInst}>
+                  <a
+                    href="https://github.com/GabrielGCJ"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >
+                    <img className="whiteIcon" src={gitImage} alt="" />
+                  </a>
 
-                <a
-                  className="cont1"
-                  href="https://www.instagram.com/gb.j_dev/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img className="whiteIcon" src={instagramImage} alt="" />
-                </a>
+                  <a
+                    href="https://www.instagram.com/gb.j_dev/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >
+                    <img className="whiteIcon" src={instagramImage} alt="" />
+                  </a>
+                </Reveal>
+                <Reveal keyframes={customAnimationLinkedin}>
+                  <a
+                    href="https://www.linkedin.com/in/gabriel-jorge-67635b221/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >
+                    <img className="whiteIcon" src={linkedinImage} alt="" />
+                  </a>
+                </Reveal>
 
-                <a
-                  className="cont2"
-                  href="https://www.linkedin.com/in/gabriel-jorge-67635b221/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img className="whiteIcon" src={linkedinImage} alt="" />
-                </a>
+                <Reveal keyframes={customAnimationWhatsAppSpotify}>
+                  <a
+                    href="https://wa.me/5521988436194"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >
+                    <img className="whiteIcon" src={whatsappImage} alt="" />
+                  </a>
 
-                <a
-                  className="cont3"
-                  href="https://wa.me/5521988436194"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img className="whiteIcon" src={whatsappImage} alt="" />
-                </a>
-
-                <a
-                  className="cont3"
-                  href="https://open.spotify.com/user/ggcj.333?si=j5p0rC6TRpyt3OA3AtgHjQ&utm_source=copy-link"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img className="whiteIcon" src={spotifyImage} alt="" />
-                </a>
+                  <a
+                    href="https://open.spotify.com/user/ggcj.333?si=j5p0rC6TRpyt3OA3AtgHjQ&utm_source=copy-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >
+                    <img className="whiteIcon" src={spotifyImage} alt="" />
+                  </a>
+                </Reveal>
               </ContactLinksContainer>
             </OtherContactsContainer>
+                    
           </ContactContainer>
         </Zoom>
       </ContactGlobalContainer>
