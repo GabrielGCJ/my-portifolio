@@ -147,7 +147,7 @@ export const ContactLinksContainer = styled.div`
     width: 2rem;
     transition: 0.25s linear;
 
-    @media (max-width: 300px) {
+    @media (max-width: 600px) {
       width: 1.3rem;
     }
 
@@ -159,7 +159,7 @@ export const ContactLinksContainer = styled.div`
 
 export const customAnimationGitInst = keyframes`
    from {
-        transform: translateX(-300%);
+        transform: translateX(-200%);
         opacity: 0;
       }
       to {
@@ -170,7 +170,7 @@ export const customAnimationGitInst = keyframes`
 
 export const customAnimationLinkedin = keyframes`
    from {
-        transform: translateY(200%);
+        transform: translateY(150%);
         opacity: 0;
       }
       to {
@@ -181,7 +181,7 @@ export const customAnimationLinkedin = keyframes`
 
 export const customAnimationWhatsAppSpotify = keyframes`
    from {
-        transform: translateX(300%);
+        transform: translateX(200%);
         opacity: 0;
       }
       to {
