@@ -147,8 +147,8 @@ export const ContactLinksContainer = styled.div`
     width: 2rem;
     transition: 0.25s linear;
 
-    @media (max-width: 300px) {
-      width: 1.3rem;
+    @media (max-width: 600px) {
+      width: 1.2rem;
     }
 
     :hover {
