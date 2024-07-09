@@ -6,7 +6,7 @@ import whatsappImage from "../../assents/lateralMenu/whatsapp.svg";
 import spotifyImage from "../../assents/lateralMenu/spotify.svg";
 import { useContext } from "react";
 import { PortfolioContext } from "../../contexts/PortfolioContext";
-import { Zoom, Reveal } from "react-awesome-reveal";
+import { Fade, Reveal } from "react-awesome-reveal";
 import {
   ContactContainer,
   ContactGlobalContainer,
@@ -36,7 +36,7 @@ export const Contact = () => {
   return (
     <form onSubmit={handleSubmit(handleCreateNewBuy)}>
       <ContactGlobalContainer>
-        <Zoom>
+        <Fade>
           <ContactContainer>
             <h2>{language === "portuguese" ? "Contato" : "Contact"}</h2>
             <InputsContainer>
@@ -125,7 +125,7 @@ export const Contact = () => {
             </OtherContactsContainer>
                     
           </ContactContainer>
-        </Zoom>
+        </Fade>
       </ContactGlobalContainer>
     </form>
   );

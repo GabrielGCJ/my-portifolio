@@ -9,8 +9,10 @@ import {
   WallpaperWhoAmILayerContainer1,
   WallpaperWhoAmILayerContainer2,
   WhoAmIContainer,
+  customAnimationPDF,
 } from "./styles";
 import { PortfolioContext } from "../../contexts/PortfolioContext";
+import { Slide, Reveal } from "react-awesome-reveal";
 
 export const WhoAmI = () => {
   const { language } = useContext(PortfolioContext);
@@ -20,9 +22,12 @@ export const WhoAmI = () => {
       <WallpaperWhoAmILayerContainer2 />
       <BlurLayerWhoAmIContainer />
       <ImageAndTextContainer>
-        <ImageContainer />
+          <ImageContainer />
+
         <TextAndButtonContainer>
-          <h1>{language === "portuguese" ? "Sobre mim" : "About me"}</h1>
+          <Slide>
+            <h1>{language === "portuguese" ? "Sobre mim" : "About me"}</h1>
+          </Slide>
 
           <p>
             {language === "portuguese"
@@ -42,13 +47,15 @@ export const WhoAmI = () => {
           </p>
 
           <a href={cv} download="cv-gabriel-jorge.pdf">
-            <ButtonCv>
-              <strong>
-                {language === "portuguese"
-                  ? "Baixar Curriculo em PDF"
-                  : "Download resume in PDF"}
-              </strong>
-            </ButtonCv>
+            <Reveal keyframes={customAnimationPDF}>
+              <ButtonCv>
+                <strong>
+                  {language === "portuguese"
+                    ? "Baixar Curriculo em PDF"
+                    : "Download resume in PDF"}
+                </strong>
+              </ButtonCv>
+            </Reveal>
           </a>
         </TextAndButtonContainer>
       </ImageAndTextContainer>
