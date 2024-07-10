@@ -45,7 +45,9 @@ export const Header = () => {
               {aboutMeContainerActive && <MenuAboutMe />}
             </div>
             <h1>{language === "portuguese" ? "Projetos" : "Projects"}</h1>
-            <h1>{language === "portuguese" ? "Contato" : "Contact"}</h1>
+            <a href="#contact">
+              <h1>{language === "portuguese" ? "Contato" : "Contact"}</h1>
+            </a>
           </HeaderContainerRigth>
         ) : (
           <HeaderContainerRigthMobile onClick={activateMobileOptions}>
