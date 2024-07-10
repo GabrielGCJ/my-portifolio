@@ -77,16 +77,11 @@ export const HeaderContainerRigth = styled.div`
   gap: 20px;
   height: 3.5rem;
 
-  /* @keyframes moveRigthToZero {
-    0% {
-      transform: translateX(100%);
-    }
-    100% {
-      transform: translateX(0);
-    }
+  a {
+    text-decoration: none;
+    font-weight: normal;
+    color: inherit;
   }
-  
-animation: moveRigthToZero 2s forwards; */
 
   h1 {
     display: flex;
@@ -108,17 +103,6 @@ animation: moveRigthToZero 2s forwards; */
 export const HeaderContainerRigthMobile = styled.div`
   display: flex;
   padding-right: 0.3rem;
-
-  /* @keyframes moveRigthToZero {
-    0% {
-      transform: translateX(100%);
-    }
-    100% {
-      transform: translateX(0);
-    }
-  }
-  
-animation: moveRigthToZero 2s forwards; */
 
   img {
     width: 1.875rem;

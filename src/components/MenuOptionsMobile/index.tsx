@@ -48,8 +48,10 @@ export const MenuOptionsMobile = () => {
           <h2 onClick={changeOptionsMenuWhoAmI}>
             {language === "portuguese" ? "Quem sou eu" : "Who am I"}
           </h2>
-          <h2>{language === "portuguese" ? "Contatos" : "Contacts"}</h2>
           <h2>{language === "portuguese" ? "Projetos" : "Projects"}</h2>
+          <a href="#contact" onClick={changeInitial}>
+            <h2>{language === "portuguese" ? "Contatos" : "Contacts"}</h2>
+          </a>
           <XCircle onClick={disableMobileOptions} size={33} weight="bold" />
         </MobileConfigContainer>
       ) : optionsMenu === "language" ? (

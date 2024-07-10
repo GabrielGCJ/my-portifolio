@@ -19,9 +19,12 @@ export function HomePage() {
       {menuMobileOptions === true && widthScream <= larguraLimite ? (
         <MenuOptionsMobile />
       ) : null}
+
       <WhoAmI />
       <SliderComponent />
-      <Contact />
+      <section id="contact">
+        <Contact />
+      </section>
     </HomeContainer>
   );
 }

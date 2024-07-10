@@ -51,27 +51,29 @@ export const MobileConfigContainer = styled.div`
   gap: 10vh;
   font-family: ${({ theme }) => theme.fonts.roboto};
 
-  svg{
-    color:red
+  svg {
+    color: red;
+  }
+
+  a {
+    text-decoration: none;
+    font-weight: normal;
+    color: inherit;
   }
 
   @keyframes slideDown {
-  0% {
-    transform: translateY(-100%);
-    color:black ;
-    
+    0% {
+      transform: translateY(-100%);
+      color: black;
+    }
+    100% {
+      transform: translateY(0%);
+      color: white;
+    }
   }
-  100% {
-    transform: translateY(0%);
-    color: white;
 
+  svg {
+    color: rgba(160, 0, 17, 0.9);
   }
-}
-
-svg {
-  color: rgba(160, 0, 17, 0.9)
-}
-animation: slideDown 1s linear;
-
-
+  animation: slideDown 1s linear;
 `;
