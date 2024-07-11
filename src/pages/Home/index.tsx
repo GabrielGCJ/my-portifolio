@@ -21,7 +21,9 @@ export function HomePage() {
       ) : null}
 
       <WhoAmI />
-      <SliderComponent />
+      <section id="projects">
+        <SliderComponent />
+      </section>
       <section id="contact">
         <Contact />
       </section>

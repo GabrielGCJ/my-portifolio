@@ -44,7 +44,11 @@ export const Header = () => {
               </h1>
               {aboutMeContainerActive && <MenuAboutMe />}
             </div>
-            <h1>{language === "portuguese" ? "Projetos" : "Projects"}</h1>
+
+            <a href="#projects">
+              <h1>{language === "portuguese" ? "Projetos" : "Projects"}</h1>
+            </a>
+
             <a href="#contact">
               <h1>{language === "portuguese" ? "Contato" : "Contact"}</h1>
             </a>

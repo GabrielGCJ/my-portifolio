@@ -48,7 +48,9 @@ export const MenuOptionsMobile = () => {
           <h2 onClick={changeOptionsMenuWhoAmI}>
             {language === "portuguese" ? "Quem sou eu" : "Who am I"}
           </h2>
-          <h2>{language === "portuguese" ? "Projetos" : "Projects"}</h2>
+          <a href="#projects" onClick={changeInitial}>
+            <h2>{language === "portuguese" ? "Projetos" : "Projects"}</h2>
+          </a>
           <a href="#contact" onClick={changeInitial}>
             <h2>{language === "portuguese" ? "Contatos" : "Contacts"}</h2>
           </a>
