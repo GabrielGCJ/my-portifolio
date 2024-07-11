@@ -14,13 +14,17 @@ export function HomePage() {
 
   return (
     <HomeContainer>
+      <section id="home">
+
       <PresentationComponent />
+      </section>
       <LateralMenu />
       {menuMobileOptions === true && widthScream <= larguraLimite ? (
         <MenuOptionsMobile />
       ) : null}
-
-      <WhoAmI />
+      <section id="whoAmI">
+        <WhoAmI />
+      </section>
       <section id="projects">
         <SliderComponent />
       </section>

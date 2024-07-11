@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const GlobalHeaderContainer = styled.header`
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
 
@@ -18,6 +18,7 @@ export const GlobalHeaderContainer = styled.header`
   width: 100%;
 
   height: 2.5rem;
+  background: rgba(3, 3, 3, 0.5);
 
   :hover {
     transition: 1.5s linear;

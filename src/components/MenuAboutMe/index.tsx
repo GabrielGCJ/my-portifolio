@@ -8,14 +8,14 @@ export const MenuAboutMe = () => {
   return (
     <MenuMenuAboutMeContainer>
       <button>
-        {language === "portuguese" ? "Sobre mim" : "About me"}
+        <a href="#whoAmI">
+          {language === "portuguese" ? "Sobre mim" : "About me"}
+        </a>
       </button>
       <button>
         {language === "portuguese" ? "O que eu faço" : "What do I do"}
       </button>
-      <button>
-        {language === "portuguese" ? "Educação" : "Education"}
-      </button>
+      <button>{language === "portuguese" ? "Educação" : "Education"}</button>
     </MenuMenuAboutMeContainer>
   );
 };

@@ -9,9 +9,6 @@ const moveRight = keyframes`
     opacity: 1;
     transform: translateX(0);
   }
-
-  
-
   `;
 
 export const MenuMenuAboutMeContainer = styled.header`
@@ -24,7 +21,6 @@ export const MenuMenuAboutMeContainer = styled.header`
 
   border-radius: 5px;
   border: 2px solid red;
-  /* box-shadow: 10px 10px 5px lightblue; */
 
   position: absolute;
   width: 12rem;

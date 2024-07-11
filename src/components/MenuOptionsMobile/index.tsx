@@ -41,19 +41,26 @@ export const MenuOptionsMobile = () => {
       <BlurLayerContainer />
       {optionsMenu === "initial" ? (
         <MobileConfigContainer>
-          <h2>Home</h2>
+          <a href="#home" onClick={changeInitial}>
+            <h2>Home</h2>
+          </a>
+
           <h2 onClick={changeOptionsMenuLanguage}>
             {language === "portuguese" ? "Idioma" : "Language"}
           </h2>
+
           <h2 onClick={changeOptionsMenuWhoAmI}>
             {language === "portuguese" ? "Quem sou eu" : "Who am I"}
           </h2>
+
           <a href="#projects" onClick={changeInitial}>
             <h2>{language === "portuguese" ? "Projetos" : "Projects"}</h2>
           </a>
+
           <a href="#contact" onClick={changeInitial}>
             <h2>{language === "portuguese" ? "Contatos" : "Contacts"}</h2>
           </a>
+
           <XCircle onClick={disableMobileOptions} size={33} weight="bold" />
         </MobileConfigContainer>
       ) : optionsMenu === "language" ? (
@@ -64,10 +71,13 @@ export const MenuOptionsMobile = () => {
         </MobileConfigContainer>
       ) : optionsMenu === "whoAmI" ? (
         <MobileConfigContainer>
-          <h2>{language === "portuguese" ? "Sobre mim" : "About me"}</h2>
+          <a href="#whoAmI" onClick={changeInitial}>
+            <h2>{language === "portuguese" ? "Sobre mim" : "About me"}</h2>
+          </a>
           <h2>
             {language === "portuguese" ? "O que eu faço" : "What do I do"}
           </h2>
+
           <h2>{language === "portuguese" ? "Educação" : "Education"}</h2>
           <XCircle onClick={changeInitial} size={33} weight="bold" />
         </MobileConfigContainer>
