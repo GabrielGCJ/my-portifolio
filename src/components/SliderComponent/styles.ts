@@ -6,7 +6,7 @@ export const SliderComponentGlobalContainer = styled.div`
   background: black;
   color: white;
   gap: 1rem;
-  padding-bottom: 2rem;
+  padding: 3rem 0 2rem 0;
   gap: 2rem;
 
   h1 {
