@@ -27,7 +27,10 @@ export const Header = () => {
 
         {widthScream >= larguraLimite ? (
           <HeaderContainerRigth>
-            <h1>Home</h1>
+            <a href="#home">
+              <h1>Home</h1>
+            </a>
+
             <div
               onMouseEnter={() => setLanguageContainerActive(true)}
               onMouseLeave={() => setLanguageContainerActive(false)}
