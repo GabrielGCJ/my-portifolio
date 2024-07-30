@@ -9,7 +9,7 @@ import {
   HeaderContainerLeft,
   HeaderContainerRigthMobile,
 } from "./styles";
-import { List } from "phosphor-react";
+import { List,  } from "phosphor-react";
 
 export const Header = () => {
   const { activateMobileOptions, widthScream, language } =
@@ -58,7 +58,7 @@ export const Header = () => {
           </HeaderContainerRigth>
         ) : (
           <HeaderContainerRigthMobile onClick={activateMobileOptions}>
-            <List size={32} />
+            <List size={32} color="white" />
           </HeaderContainerRigthMobile>
         )}
       </HeaderContainer>
