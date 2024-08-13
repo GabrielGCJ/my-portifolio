@@ -1,5 +1,7 @@
 import { useContext } from "react";
-import cv from "../../assents/cv/cv-gabriel-jorge.pdf";
+import cv from "../../assents/cv/cv_gabriel_jorge.pdf";
+import { PortfolioContext } from "../../contexts/PortfolioContext";
+import { Slide, Reveal } from "react-awesome-reveal";
 import {
   BlurLayerWhoAmIContainer,
   ButtonCv,
@@ -11,8 +13,6 @@ import {
   WhoAmIContainer,
   customAnimationPDF,
 } from "./styles";
-import { PortfolioContext } from "../../contexts/PortfolioContext";
-import { Slide, Reveal } from "react-awesome-reveal";
 
 export const WhoAmI = () => {
   const { language } = useContext(PortfolioContext);
@@ -22,7 +22,7 @@ export const WhoAmI = () => {
       <WallpaperWhoAmILayerContainer2 />
       <BlurLayerWhoAmIContainer />
       <ImageAndTextContainer>
-          <ImageContainer />
+        <ImageContainer />
 
         <TextAndButtonContainer>
           <Slide>
