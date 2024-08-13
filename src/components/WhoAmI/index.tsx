@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import cv from "../../assents/cv/cv_gabriel_jorge.pdf";
+import cv from "../../assents/cv/cv-gabriel-jorge.pdf";
 import { PortfolioContext } from "../../contexts/PortfolioContext";
 import { Slide, Reveal } from "react-awesome-reveal";
 import {
