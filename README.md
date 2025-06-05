@@ -35,8 +35,3 @@ Acesse o endereço localhost porta 3002 em seu navegador ou ferramenta de testes
 http://localhost:5173
 
 ----
-
-Proximas melhorias:
-Adição de componente "O que eu faço".
-Adição de componente "Educação
-"
