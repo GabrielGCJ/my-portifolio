@@ -1,4 +1,4 @@
-import { useForm } from "react-hook-form";
+// import { useForm } from "react-hook-form";
 import gitImage from "../../assents/lateralMenu/github.svg";
 import instagramImage from "../../assents/lateralMenu/instagram.svg";
 import linkedinImage from "../../assents/lateralMenu/linkedin.svg";
@@ -11,12 +11,12 @@ import {
   ContactContainer,
   ContactGlobalContainer,
   ContactLinksContainer,
-  DetailsInput,
-  EmailInput,
-  InputsContainer,
-  NameInput,
+  // DetailsInput,
+  // EmailInput,
+  // InputsContainer,
+  // NameInput,
   OtherContactsContainer,
-  TelephoneInput,
+  // TelephoneInput,
   customAnimationGitInst,
   customAnimationLinkedin,
   customAnimationWhatsAppSpotify,
@@ -24,22 +24,25 @@ import {
 
 export const Contact = () => {
   const { language } = useContext(PortfolioContext);
-  const { register, handleSubmit, reset } = useForm();
+  // const { register, handleSubmit, reset } = useForm();
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const handleCreateNewBuy = async (data: any) => {
-    console.log(data);
-    reset();
-    // setinfo(data);
-  };
+  // const handleCreateNewBuy = async (data: any) => {
+  //   console.log(data);
+  //   reset();
+  //   // setinfo(data);
+  // };
 
   return (
-    <form onSubmit={handleSubmit(handleCreateNewBuy)}>
+    <form 
+    // onSubmit={handleSubmit(handleCreateNewBuy)}
+    >
+
       <ContactGlobalContainer>
         <Fade>
           <ContactContainer>
-            <h2>{language === "portuguese" ? "Contato" : "Contact"}</h2>
-            <InputsContainer>
+            {/* <h2>{language === "portuguese" ? "Contato" : "Contact"}</h2> */}
+            {/* <InputsContainer>
               <NameInput
                 id="name"
                 placeholder={language === "portuguese" ? "Nome" : "Name"}
@@ -67,15 +70,15 @@ export const Contact = () => {
               <button type="submit">
                 {language === "portuguese" ? "Enviar" : "Submit"}
               </button>
-            </InputsContainer>
+            </InputsContainer> */}
 
          
             <OtherContactsContainer>
-              <h3>
+              <h2>
                 {language === "portuguese"
-                  ? "Outros Contatos"
-                  : "Other contacts"}
-              </h3>
+                  ? "Contatos"
+                  : "Contacts"}
+              </h2>
               <ContactLinksContainer>
                 <Reveal keyframes={customAnimationGitInst}>
                   <a
