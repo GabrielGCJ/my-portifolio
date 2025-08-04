@@ -1,37 +1,37 @@
-# Portfolio
+# Portfólio — Gabriel Jorge
 
-Bem-vindo ao meu portfólio em desenvolvimento! Aqui você encontrará uma coleção de projetos que desenvolvi, voltados tanto para o meu crescimento pessoal e aprendizado quanto para a criação de soluções inovadoras para diversos desafios.
+**Acesse**: https://gabriel-jorge.netlify.app/
 
+Bem-vindo ao meu portfólio digital! Aqui você encontrará meus projetos mais recentes, desafios técnicos e um pouco da minha personalidade como desenvolvedor e entusiasta da tecnologia.
 
-### Para rodar o projeto:
+---
 
->Clone este repositório em sua máquina:
+## ✨ Visão Geral
 
-```
+Este site apresenta:
+
+- Seção **"Sobre mim"** com informações sobre meu background e motivações.  
+- Galeria de **projetos**, cada um com captura de tela, descrição e links para repositórios ou demonstrações.  
+- Experiências e habilidades técnicas destacadas com tecnologias como React, Vite, Tailwind etc.  
+- Seção de contato com links diretos para redes sociais e e-mail.
+
+---
+
+## 🚀 Tecnologias Utilizadas
+
+- **Frontend**: React, Vite, Tailwind CSS  
+- **Deploy**: Netlify (hosting e CI/CD)  
+- **Design**: Foco em responsividade e acessibilidade  
+- **Extras**: animações CSS, design clean e moderno
+
+---
+
+## 🚧 Como Rodar Localmente
+
+Clone este repositório e teste o site em sua máquina:
+
+```bash
 git clone https://github.com/GabrielGCJ/my-portifolio.git
-```
-
->Entre na pasta do projeto:
-
-```
 cd my-portifolio
-
-```
-
->Instale o projeto:
-
-```
 npm install
-```
-
->Rode o projeto:
-
-```
 npm run dev
-```
-
-Acesse o endereço localhost porta 3002 em seu navegador ou ferramenta de testes para interagir com a aplicação:
-
-http://localhost:5173
-
-----
