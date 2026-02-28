@@ -14,7 +14,7 @@ interface CreateContextType {
   changeOptionsMenuWhoAmI: () => void
 }
 
-export const PortfolioContext = createContext({} as CreateContextType);
+export const PortfolioContext = createContext<CreateContextType |null>(null);
 
 interface PortfolioContextProviderProps {
   children: ReactNode;
@@ -50,7 +50,7 @@ export const PortfolioContextProvider = ({
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, [widthScream]);
+  }, []);
 
   const changeLanguageToPortuguese = () => {
     setLanguage("portuguese")
