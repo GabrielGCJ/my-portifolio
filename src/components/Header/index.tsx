@@ -12,7 +12,7 @@ import { List,  } from "phosphor-react";
 import { usePortfolio } from "../../hooks/usePortfolio";
 
 export const Header = () => {
-  const { activateMobileOptions, widthScream, language } =
+  const { activateMobileOptions, widthScreen, language } =
     usePortfolio();
   const [languageContainerActive, setLanguageContainerActive] = useState(false);
   const [aboutMeContainerActive, setAboutMeContainerActive] = useState(false);
@@ -25,7 +25,7 @@ export const Header = () => {
           <h1>Gabriel Jorge</h1>
         </HeaderContainerLeft>
 
-        {widthScream >= larguraLimite ? (
+        {widthScreen >= larguraLimite ? (
           <HeaderContainerRigth>
             <a href="#home">
               <h1>Home</h1>

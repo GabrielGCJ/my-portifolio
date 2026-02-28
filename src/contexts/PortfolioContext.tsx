@@ -6,7 +6,7 @@ interface CreateContextType {
   disableMobileOptions: () => void
   changeLanguageToPortuguese: () => void
   changeLanguageToEnglish: () => void
-  widthScream: number
+  widthScreen: number
   language: string
   optionsMenu: string
   changeOptionsMenuInitial: () => void
@@ -26,7 +26,7 @@ export const PortfolioContextProvider = ({
   const [menuMobileOptions, setMenuMobileOptions] = useState(false);
   const [optionsMenu, setOptionsMenu] = useState("initial")
   const [ language, setLanguage ] = useState("portuguese")
-  const [widthScream, setWidthScream] = useState(window.innerWidth);
+  const [widthScreen, setWidthScreen] = useState(window.innerWidth);
 
   const changeOptionsMenuInitial = () => {  
     setOptionsMenu("initial")
@@ -42,7 +42,7 @@ export const PortfolioContextProvider = ({
 
   useEffect(() => {
     const handleResize = () => {
-      setWidthScream(window.innerWidth);
+      setWidthScreen(window.innerWidth);
     };
 
     window.addEventListener("resize", handleResize);
@@ -76,7 +76,7 @@ const disableMobileOptions = () => {
         menuMobileOptions,
         activateMobileOptions,
         disableMobileOptions,
-        widthScream,
+        widthScreen,
         changeLanguageToPortuguese,
         changeLanguageToEnglish,
         language,
