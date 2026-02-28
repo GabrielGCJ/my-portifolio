@@ -4,20 +4,8 @@ import img from "../../assents/moon.jpg"
 export const PresentationComponentContainer = styled.div`
   display: flex;
   position: relative;
-  /* height: 95vh; */
   width: 100%;
-
-  @keyframes descerUp {
-    0% {
-      height: 100vh;
-    }
-    100% {
-      height: 95vh;
-    }
-  }
-
-  animation: descerUp 6s linear infinite alternate;
-
+  height: 90vh;
 `;
 
 export const WallpaperLayerContainer = styled.div`
