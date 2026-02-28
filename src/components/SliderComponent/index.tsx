@@ -1,7 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
-import { useContext, useEffect, useState } from "react";
-import { PortfolioContext } from "../../contexts/PortfolioContext";
+import { useEffect, useState } from "react";
 import { Zoom, Fade } from "react-awesome-reveal";
 
 import "swiper/css/navigation";
@@ -15,9 +14,10 @@ import {
   SliderAndTextComponent,
   SliderComponentGlobalContainer,
 } from "./styles";
+import { usePortfolio } from "../../hooks/usePortfolio";
 
 export const SliderComponent = () => {
-  const { widthScream, language } = useContext(PortfolioContext);
+  const { widthScream, language } = usePortfolio();
   const [slidesNumber, setSlidesNumber] = useState(0);
 
   useEffect(() => {

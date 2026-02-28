@@ -1,11 +1,11 @@
-import { useContext } from "react";
 import {
   BlurLayerContainer,
   MobileConfigContainer,
   MobileConfigGlobalContainer,
 } from "./styles";
-import { PortfolioContext } from "../../contexts/PortfolioContext";
+
 import { XCircle } from "phosphor-react";
+import { usePortfolio } from "../../hooks/usePortfolio";
 
 export const MenuOptionsMobile = () => {
   const {
@@ -17,7 +17,7 @@ export const MenuOptionsMobile = () => {
     changeOptionsMenuWhoAmI,
     changeLanguageToPortuguese,
     changeLanguageToEnglish,
-  } = useContext(PortfolioContext);
+  } = usePortfolio();
 
   const changeInitial = () => {
     disableMobileOptions();

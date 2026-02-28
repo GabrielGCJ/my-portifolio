@@ -1,10 +1,9 @@
-import { useContext } from "react";
-import { PortfolioContext } from "../../contexts/PortfolioContext";
 import { MenuLanguageContainer } from "./styles";
+import { usePortfolio } from "../../hooks/usePortfolio";
 
 export const MenuLanguage = () => {
   const { changeLanguageToEnglish, changeLanguageToPortuguese } =
-    useContext(PortfolioContext);
+    usePortfolio();
   return (
     <MenuLanguageContainer>
       <button onClick={changeLanguageToPortuguese}>Portugues</button>

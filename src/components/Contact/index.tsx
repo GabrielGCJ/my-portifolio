@@ -4,8 +4,6 @@ import instagramImage from "../../assents/lateralMenu/instagram.svg";
 import linkedinImage from "../../assents/lateralMenu/linkedin.svg";
 import whatsappImage from "../../assents/lateralMenu/whatsapp.svg";
 import spotifyImage from "../../assents/lateralMenu/spotify.svg";
-import { useContext } from "react";
-import { PortfolioContext } from "../../contexts/PortfolioContext";
 import { Fade, Reveal } from "react-awesome-reveal";
 import {
   ContactContainer,
@@ -21,9 +19,10 @@ import {
   customAnimationLinkedin,
   customAnimationWhatsAppSpotify,
 } from "./styles";
+import { usePortfolio } from "../../hooks/usePortfolio";
 
 export const Contact = () => {
-  const { language } = useContext(PortfolioContext);
+  const { language } = usePortfolio();
   // const { register, handleSubmit, reset } = useForm();
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any

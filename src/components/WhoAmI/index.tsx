@@ -1,6 +1,4 @@
-import { useContext } from "react";
 import cv from "../../assents/cv/cv-gabriel-jorge.pdf";
-import { PortfolioContext } from "../../contexts/PortfolioContext";
 import { Slide, Reveal } from "react-awesome-reveal";
 import {
   BlurLayerWhoAmIContainer,
@@ -13,9 +11,10 @@ import {
   WhoAmIContainer,
   customAnimationPDF,
 } from "./styles";
+import { usePortfolio } from "../../hooks/usePortfolio";
 
 export const WhoAmI = () => {
-  const { language } = useContext(PortfolioContext);
+  const { language } = usePortfolio();
   return (
     <WhoAmIContainer>
       <WallpaperWhoAmILayerContainer1 />

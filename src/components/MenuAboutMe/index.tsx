@@ -1,9 +1,8 @@
-import { useContext } from "react";
 import { MenuMenuAboutMeContainer } from "./styles";
-import { PortfolioContext } from "../../contexts/PortfolioContext";
+import { usePortfolio } from "../../hooks/usePortfolio";
 
 export const MenuAboutMe = () => {
-  const { language } = useContext(PortfolioContext);
+  const { language } = usePortfolio();
 
   return (
     <MenuMenuAboutMeContainer>
