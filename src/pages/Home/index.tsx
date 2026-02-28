@@ -1,15 +1,14 @@
-import { useContext } from "react";
 import { LateralMenu } from "../../components/LateralMenu";
 import { PresentationComponent } from "../../components/PresentationComponent";
 import { WhoAmI } from "../../components/WhoAmI";
 import { HomeContainer } from "./styles";
-import { PortfolioContext } from "../../contexts/PortfolioContext";
 import { MenuOptionsMobile } from "../../components/MenuOptionsMobile";
 import { SliderComponent } from "../../components/SliderComponent";
 import { Contact } from "../../components/Contact";
+import { usePortfolio } from "../../hooks/usePortfolio";
 
 export function HomePage() {
-  const { menuMobileOptions, widthScream } = useContext(PortfolioContext);
+  const { menuMobileOptions, widthScream } = usePortfolio();
   const larguraLimite = 750;
 
   return (
