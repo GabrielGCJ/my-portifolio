@@ -1,5 +1,4 @@
-import { PortfolioContext } from "../../contexts/PortfolioContext";
-import { useContext, useState } from "react";
+import { useState } from "react";
 import { MenuLanguage } from "../MenuLanguage";
 import { MenuAboutMe } from "../MenuAboutMe";
 import {
@@ -10,10 +9,11 @@ import {
   HeaderContainerRigthMobile,
 } from "./styles";
 import { List,  } from "phosphor-react";
+import { usePortfolio } from "../../hooks/usePortfolio";
 
 export const Header = () => {
   const { activateMobileOptions, widthScream, language } =
-    useContext(PortfolioContext);
+    usePortfolio();
   const [languageContainerActive, setLanguageContainerActive] = useState(false);
   const [aboutMeContainerActive, setAboutMeContainerActive] = useState(false);
   const larguraLimite = 750;
