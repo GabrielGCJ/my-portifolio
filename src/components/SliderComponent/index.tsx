@@ -17,16 +17,16 @@ import {
 import { usePortfolio } from "../../hooks/usePortfolio";
 
 export const SliderComponent = () => {
-  const { widthScream, language } = usePortfolio();
+  const { widthScreen, language } = usePortfolio();
   const [slidesNumber, setSlidesNumber] = useState(0);
 
   useEffect(() => {
-    if (widthScream <= 750) {
+    if (widthScreen <= 750) {
       setSlidesNumber(1);
     } else {
       setSlidesNumber(3);
     }
-  }, [widthScream]);
+  }, [widthScreen]);
 
   return (
     <SliderComponentGlobalContainer>

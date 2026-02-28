@@ -8,7 +8,7 @@ import { Contact } from "../../components/Contact";
 import { usePortfolio } from "../../hooks/usePortfolio";
 
 export function HomePage() {
-  const { menuMobileOptions, widthScream } = usePortfolio();
+  const { menuMobileOptions, widthScreen } = usePortfolio();
   const larguraLimite = 750;
 
   return (
@@ -18,7 +18,7 @@ export function HomePage() {
       <PresentationComponent />
       </section>
       <LateralMenu />
-      {menuMobileOptions === true && widthScream <= larguraLimite ? (
+      {menuMobileOptions === true && widthScreen <= larguraLimite ? (
         <MenuOptionsMobile />
       ) : null}
       <section id="whoAmI">
