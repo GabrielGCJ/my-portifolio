@@ -5,13 +5,15 @@ export const ContactGlobalContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 50rem;
+  /* min-height: 50rem; */
+  /* height: 100vh; */
   width: 100%;
-  height: 100vh;
   flex-direction: row;
   overflow: hidden;
   font-family: ${({ theme }) => theme.fonts.roboto};
 
+  margin-top: 1vh;
+  margin-bottom: 2vh;
   background-color: black;
   gap: 20rem;
 
@@ -30,7 +32,7 @@ export const ContactContainer = styled.div`
   justify-content: center;
   max-width: 95vw;
   height: 80%;
-  background: rgba(160, 0, 17, 0.6);
+  background: rgba(67, 5, 12, 0.6);
   border-radius: 1%;
   padding: 1rem;
   width: 40rem;
@@ -129,7 +131,7 @@ export const OtherContactsContainer = styled.div`
   flex-direction: column;
   width: 95%;
   height: 12rem;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(165, 134, 134, 0.2);
   margin-top: 20px;
   gap: 1rem;
   padding: 1rem 0 1rem 0;

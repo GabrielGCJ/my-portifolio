@@ -1,9 +1,9 @@
 // import { useForm } from "react-hook-form";
 import gitImage from "../../assents/lateralMenu/github.svg";
-import instagramImage from "../../assents/lateralMenu/instagram.svg";
+// import instagramImage from "../../assents/lateralMenu/instagram.svg";
 import linkedinImage from "../../assents/lateralMenu/linkedin.svg";
 import whatsappImage from "../../assents/lateralMenu/whatsapp.svg";
-import spotifyImage from "../../assents/lateralMenu/spotify.svg";
+// import spotifyImage from "../../assents/lateralMenu/spotify.svg";
 import { Fade, Reveal } from "react-awesome-reveal";
 import {
   ContactContainer,
@@ -75,8 +75,8 @@ export const Contact = () => {
             <OtherContactsContainer>
               <h2>
                 {language === "portuguese"
-                  ? "Contatos"
-                  : "Contacts"}
+                  ? "Conecte-se"
+                  : "Get in Touch"}
               </h2>
               <ContactLinksContainer>
                 <Reveal keyframes={customAnimationGitInst}>
@@ -88,13 +88,13 @@ export const Contact = () => {
                     <img className="whiteIcon" src={gitImage} alt="" />
                   </a>
 
-                  <a
+                  {/* <a
                     href="https://www.instagram.com/gb.j_dev/"
                     target="_blank"
                     rel="noopener noreferrer"
                     >
                     <img className="whiteIcon" src={instagramImage} alt="" />
-                  </a>
+                  </a> */}
                 </Reveal>
                 <Reveal keyframes={customAnimationLinkedin}>
                   <a
@@ -115,13 +115,13 @@ export const Contact = () => {
                     <img className="whiteIcon" src={whatsappImage} alt="" />
                   </a>
 
-                  <a
+                  {/* <a
                     href="https://open.spotify.com/user/ggcj.333?si=j5p0rC6TRpyt3OA3AtgHjQ&utm_source=copy-link"
                     target="_blank"
                     rel="noopener noreferrer"
                     >
                     <img className="whiteIcon" src={spotifyImage} alt="" />
-                  </a>
+                  </a> */}
                 </Reveal>
               </ContactLinksContainer>
             </OtherContactsContainer>
