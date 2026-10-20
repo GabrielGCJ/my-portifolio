@@ -10,7 +10,7 @@ export const ContactGlobalContainer = styled.div`
   flex-direction: column;
   overflow: hidden;
   font-family: ${({ theme }) => theme.fonts.roboto};
-  background-color: black;
+  background-color: #101014;
 
   h2,
   h3 {
@@ -27,7 +27,8 @@ export const ContactContainer = styled.div`
   justify-content: center;
   max-width: 95vw;
   height: auto;
-  background: rgba(67, 5, 12, 0.6);
+  border: 1px solid rgba(199, 168, 255, 0.2);
+  background: rgba(24, 22, 30, 0.94);
   border-radius: 1rem;
   padding: clamp(1.25rem, 4vw, 2.5rem);
   width: min(100%, 40rem);
@@ -58,7 +59,7 @@ export const InputsContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.25);
   width: 95%;
   height: 65%;
   gap: 1rem;
@@ -72,14 +73,14 @@ export const InputsContainer = styled.div`
     align-items: center;
     width: 50%;
     height: 2rem;
-    background-color: rgba(160, 0, 17, 0.6);
-    border: 2px solid rgba(160, 0, 17, 0.9);
+    background-color: #8047f8;
+    border: 2px solid #8047f8;
     border-radius: 0.3rem;
     font-size: 1rem;
     color: white;
 
     :hover {
-      background-color: rgba(160, 0, 17, 0.9);
+      background-color: #6b35dc;
       transition: 1s;
     }
 
@@ -170,14 +171,14 @@ const ImputProps = styled.input`
   align-items: center;
   height: 3rem;
   width: 90%;
-  background-color: rgba(160, 0, 17, 0.7);
+  background-color: rgba(128, 71, 248, 0.14);
   border-radius: 10px;
-  border: 2px solid white;
+  border: 1px solid rgba(199, 168, 255, 0.35);
   color: white;
   padding: 10px;
 
   :hover {
-    background-color: rgba(160, 160, 160, 0.5);
+    background-color: rgba(128, 71, 248, 0.24);
     transition: 0.7s;
   }
   ::placeholder {
@@ -209,7 +210,9 @@ export const OtherContactsContainer = styled.div`
   width: 95%;
   min-height: 9rem;
   height: auto;
-  background: rgba(165, 134, 134, 0.2);
+  border: 1px solid rgba(199, 168, 255, 0.12);
+  border-radius: 0.9rem;
+  background: rgba(255, 255, 255, 0.035);
   margin-top: 1rem;
   gap: 1rem;
   padding: 1rem 0 1rem 0;
@@ -217,7 +220,8 @@ export const OtherContactsContainer = styled.div`
 
 export const ContactLinksContainer = styled.div`
   padding: 1rem 0 1rem 0;
-  background-color: rgba(160, 90, 90, 0.4);
+  border-radius: 0.7rem;
+  background-color: rgba(128, 71, 248, 0.1);
   display: flex;
   justify-content: space-around;
   align-items: center;
