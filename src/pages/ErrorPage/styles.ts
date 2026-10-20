@@ -5,11 +5,6 @@ const appear = keyframes`
   to { opacity: 1; transform: translateY(0); }
 `;
 
-const wiggle = keyframes`
-  0%, 100% { transform: rotate(-12deg); }
-  50% { transform: rotate(12deg); }
-`;
-
 export const Page = styled.main`
   position: relative;
   display: grid;
@@ -124,6 +119,7 @@ export const Board = styled.div`
     gap: 0.8rem;
     color: #eeeaf5;
     font-weight: 700;
+    padding: 1rem;
   }
 `;
 
@@ -141,8 +137,9 @@ export const BugButton = styled.button`
   cursor: pointer;
   font-size: 1.8rem;
   transform: translate(-50%, -50%);
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
   transition: background 150ms ease, scale 150ms ease;
-  animation: ${wiggle} 700ms ease-in-out infinite;
 
   &:hover,
   &:focus-visible {
@@ -152,10 +149,7 @@ export const BugButton = styled.button`
     outline-offset: 3px;
   }
 
-  @media (prefers-reduced-motion: reduce) {
-    animation: none;
-    transition: none;
-  }
+  @media (prefers-reduced-motion: reduce) { transition: none; }
 `;
 
 export const HomeButton = styled.button`
