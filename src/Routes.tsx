@@ -10,8 +10,8 @@ export function Router() {
       <Route path="/" element={<DefaultLayout />}>
         <Route index element={<HomePage />} />
         <Route path="test" element={<WhatDoIDo />} />
-        <Route path="*" element={<ErrorPage />} />
       </Route>
+      <Route path="*" element={<ErrorPage />} />
     </Routes>
   );
 }

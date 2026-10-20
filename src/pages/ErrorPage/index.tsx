@@ -1,100 +1,104 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Button, Canvas, Container, Content, Countdown, ErrorCode, Message } from "./styles";
+import {
+  Board,
+  BugButton,
+  GameInfo,
+  HomeButton,
+  Page,
+  Panel,
+  RestartButton,
+  Score,
+  Title,
+} from "./styles";
 
-export const ErrorPage: React.FC = () => {
+const GAME_LENGTH = 20;
+
+function randomPosition() {
+  return {
+    left: `${8 + Math.random() * 78}%`,
+    top: `${10 + Math.random() * 68}%`,
+  };
+}
+
+export function ErrorPage() {
   const navigate = useNavigate();
-  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const [score, setScore] = useState(0);
+  const [seconds, setSeconds] = useState(GAME_LENGTH);
+  const [position, setPosition] = useState(randomPosition);
+  const [isPlaying, setIsPlaying] = useState(true);
 
-  const [seconds, setSeconds] = useState(5);
-  const [dark, setDark] = useState<boolean>(
-    window.matchMedia("(prefers-color-scheme: dark)").matches
-  );
-
-  const isPortuguese = navigator.language.startsWith("pt");
-
-  // 🌙 Detecta mudança de tema do sistema
   useEffect(() => {
-    const media = window.matchMedia("(prefers-color-scheme: dark)");
-    const listener = () => setDark(media.matches);
-    media.addEventListener("change", listener);
-    return () => media.removeEventListener("change", listener);
-  }, []);
+    if (!isPlaying) return;
 
-  // ⏳ Contador regressivo
-  useEffect(() => {
-    if (seconds === 0) {
-      navigate("/");
-      return;
-    }
-
-    const timer = setTimeout(() => {
-      setSeconds((prev) => prev - 1);
+    const timer = window.setTimeout(() => {
+      if (seconds <= 1) {
+        setSeconds(0);
+        setIsPlaying(false);
+        return;
+      }
+      setSeconds(seconds - 1);
     }, 1000);
 
-    return () => clearTimeout(timer);
-  }, [seconds, navigate]);
+    return () => window.clearTimeout(timer);
+  }, [isPlaying, seconds]);
 
-  // ✨ Partículas
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
+  function catchBug() {
+    if (!isPlaying) return;
+    setScore((current) => current + 1);
+    setPosition(randomPosition());
+  }
 
-    const ctx = canvas.getContext("2d");
-    if (!ctx) return;
-
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-
-    const particles = Array.from({ length: 60 }).map(() => ({
-      x: Math.random() * canvas.width,
-      y: Math.random() * canvas.height,
-      size: Math.random() * 2,
-      speed: Math.random() * 0.5 + 0.2,
-    }));
-
-    const animate = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-      particles.forEach((p) => {
-        p.y += p.speed;
-        if (p.y > canvas.height) p.y = 0;
-
-        ctx.beginPath();
-        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-        ctx.fillStyle = dark ? "rgba(255,255,255,0.5)" : "rgba(0,0,0,0.3)";
-        ctx.fill();
-      });
-
-      requestAnimationFrame(animate);
-    };
-
-    animate();
-  }, [dark]);
+  function restartGame() {
+    setScore(0);
+    setSeconds(GAME_LENGTH);
+    setPosition(randomPosition());
+    setIsPlaying(true);
+  }
 
   return (
-    <Container dark={dark}>
-      <Canvas ref={canvasRef} />
+    <Page>
+      <Panel>
+        <span className="eyebrow">OPA! VOCÊ SAIU DA ROTA</span>
+        <Title>404</Title>
+        <p className="message">
+          Essa página não existe. Enquanto encontra o caminho de volta, tente
+          capturar o bug fugitivo!
+        </p>
 
-      <Content>
-        <ErrorCode>404</ErrorCode>
+        <GameInfo>
+          <Score aria-live="polite">Bugs capturados: <strong>{score}</strong></Score>
+          <span>{isPlaying ? `Tempo: ${seconds}s` : "Tempo esgotado!"}</span>
+        </GameInfo>
 
-        <Message>
-          {isPortuguese
-            ? "Você encontrou uma rota inexistente... mas isso também faz parte do projeto 😉"
-            : "You found a non-existent route... but this is also part of the project 😉"}
-        </Message>
+        <Board aria-label="Área do jogo: capture o bug">
+          {isPlaying ? (
+            <BugButton
+              type="button"
+              style={position}
+              onClick={catchBug}
+              aria-label="Capturar bug"
+              title="Pegue o bug!"
+            >
+              🐛
+            </BugButton>
+          ) : (
+            <div className="result" role="status">
+              <span>{score > 0 ? "Boa captura!" : "O bug escapou!"}</span>
+              <RestartButton type="button" onClick={restartGame}>
+                Jogar de novo
+              </RestartButton>
+            </div>
+          )}
+          <span className="board-hint" aria-hidden="true">clique no bug para pontuar</span>
+        </Board>
 
-        <Countdown>
-          {isPortuguese
-            ? `Redirecionando em ${seconds}s`
-            : `Redirecting in ${seconds}s`}
-        </Countdown>
-
-        <Button dark={dark} onClick={() => navigate("/")}>
-          {isPortuguese ? "Voltar agora" : "Go back now"}
-        </Button>
-      </Content>
-    </Container>
+        <HomeButton type="button" onClick={() => navigate("/")}>
+          Voltar ao portfólio <span aria-hidden="true">↗</span>
+        </HomeButton>
+      </Panel>
+      <span className="decoration decoration-one" aria-hidden="true">✳</span>
+      <span className="decoration decoration-two" aria-hidden="true">✦</span>
+    </Page>
   );
-};
+}
