@@ -14,7 +14,18 @@
     <title>Gabriel Jorge</title>
   </head>
   <body>
-    <div id="initial-loader" aria-hidden="true" style="position:fixed;inset:0;z-index:9999;background:#101014"></div>
+    <div
+      id="initial-loader"
+      role="status"
+      aria-label="Carregando portfólio"
+      style="position:fixed;inset:0;z-index:9999;display:grid;place-items:center;background:#101014;color:#f7f5fa;font-family:Arial,sans-serif;text-align:center"
+    >
+      <div>
+        <div style="display:grid;width:56px;height:56px;margin:0 auto 20px;place-items:center;border:1px solid #b794ff;border-radius:18px;color:#c7a8ff;font-size:20px;font-weight:700">GJ</div>
+        <p style="margin:0;font-size:16px;font-weight:700;letter-spacing:3px">GABRIEL JORGE</p>
+        <p style="margin:10px 0 0;color:#a5a0ad;font-size:13px">Carregando portfólio...</p>
+      </div>
+    </div>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
