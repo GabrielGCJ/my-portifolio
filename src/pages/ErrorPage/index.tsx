@@ -26,7 +26,8 @@ export function ErrorPage() {
   const [score, setScore] = useState(0);
   const [seconds, setSeconds] = useState(GAME_LENGTH);
   const [position, setPosition] = useState(randomPosition);
-  const [isPlaying, setIsPlaying] = useState(true);
+  const [hasStarted, setHasStarted] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
 
   useEffect(() => {
     if (!isPlaying) return;
@@ -68,7 +69,9 @@ export function ErrorPage() {
 
         <GameInfo>
           <Score aria-live="polite">Bugs capturados: <strong>{score}</strong></Score>
-          <span>{isPlaying ? `Tempo: ${seconds}s` : "Tempo esgotado!"}</span>
+          <span>
+            {isPlaying ? `Tempo: ${seconds}s` : hasStarted ? "Tempo esgotado!" : "Pronto?"}
+          </span>
         </GameInfo>
 
         <Board aria-label="Área do jogo: capture o bug">
@@ -82,15 +85,25 @@ export function ErrorPage() {
             >
               🐛
             </BugButton>
-          ) : (
+          ) : hasStarted ? (
             <div className="result" role="status">
               <span>{score > 0 ? "Boa captura!" : "O bug escapou!"}</span>
               <RestartButton type="button" onClick={restartGame}>
                 Jogar de novo
               </RestartButton>
             </div>
+          ) : (
+            <div className="result">
+              <span>Toque para começar!</span>
+              <RestartButton type="button" onClick={() => {
+                setHasStarted(true);
+                setIsPlaying(true);
+              }}>
+                Começar jogo
+              </RestartButton>
+            </div>
           )}
-          <span className="board-hint" aria-hidden="true">clique no bug para pontuar</span>
+          {isPlaying && <span className="board-hint" aria-hidden="true">toque no bug para pontuar</span>}
         </Board>
 
         <HomeButton type="button" onClick={() => navigate("/")}>
