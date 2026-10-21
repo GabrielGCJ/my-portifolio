@@ -22,7 +22,6 @@ export const MenuLanguageContainer = styled.header`
 
   border-radius: 5px;
   border: 2px solid red;
-  /* box-shadow: 10px 10px 5px lightblue;    */
 
   position: absolute ;
   width:  7rem;
