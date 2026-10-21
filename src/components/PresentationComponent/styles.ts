@@ -5,7 +5,7 @@ export const PresentationComponentContainer = styled.div`
   display: flex;
   position: relative;
   width: 100%;
-  height: 90vh;
+  height: 95vh;
 `;
 
 export const WallpaperLayerContainer = styled.div`

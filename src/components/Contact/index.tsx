@@ -21,12 +21,14 @@ import { usePortfolio } from "../../hooks/usePortfolio";
 type SubmissionResponse = {
   success: boolean;
   message?: string;
+  body?: { message?: string };
 };
 
 export const Contact = () => {
   const { language } = usePortfolio();
   const [isSending, setIsSending] = useState(false);
   const [status, setStatus] = useState<"idle" | "success" | "error" | "missing-key">("idle");
+  const [submissionError, setSubmissionError] = useState("");
   const isPortuguese = language === "portuguese";
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
@@ -41,6 +43,7 @@ export const Contact = () => {
 
     setIsSending(true);
     setStatus("idle");
+    setSubmissionError("");
 
     try {
       const formData = new FormData(form);
@@ -62,11 +65,14 @@ export const Contact = () => {
       });
 
       const result = (await response.json()) as SubmissionResponse;
-      if (!response.ok || !result.success) throw new Error(result.message);
+      if (!response.ok || !result.success) {
+        throw new Error(result.message || result.body?.message || `HTTP ${response.status}`);
+      }
 
       form.reset();
       setStatus("success");
-    } catch {
+    } catch (error) {
+      setSubmissionError(error instanceof Error ? error.message : "");
       setStatus("error");
     } finally {
       setIsSending(false);
@@ -78,9 +84,11 @@ export const Contact = () => {
     success: isPortuguese
       ? "Mensagem enviada! Obrigado por entrar em contato."
       : "Message sent! Thanks for reaching out.",
-    error: isPortuguese
-      ? "Não foi possível enviar agora. Tente novamente ou use um dos contatos abaixo."
-      : "Could not send your message. Please try again or use one of the contacts below.",
+    error: submissionError
+      ? `${isPortuguese ? "Falha no envio" : "Submission failed"}: ${submissionError}`
+      : isPortuguese
+        ? "Não foi possível enviar agora. Tente novamente ou use um dos contatos abaixo."
+        : "Could not send your message. Please try again or use one of the contacts below.",
     "missing-key": isPortuguese
       ? "O formulário ainda precisa ser configurado. Você pode falar comigo pelos contatos abaixo."
       : "The form still needs to be configured. You can reach me using the contacts below.",
