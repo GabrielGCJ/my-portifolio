@@ -8,6 +8,44 @@ export const PresentationComponentContainer = styled.div`
   height: 95vh;
 `;
 
+export const ScrollHint = styled.div`
+  position: absolute;
+  z-index: 6;
+  left: 50%;
+  bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  transform: translateX(-50%);
+  color: rgba(255, 255, 255, 0.82);
+  pointer-events: none;
+
+  svg {
+    width: 2.5rem;
+    height: 2.5rem;
+    filter: drop-shadow(0 1px 5px rgba(0, 0, 0, 0.55));
+    animation: scroll-down 1.8s ease-in-out infinite;
+  }
+
+  @keyframes scroll-down {
+    0%, 100% {
+      transform: translateY(0);
+      opacity: 0.65;
+    }
+    50% {
+      transform: translateY(0.45rem);
+      opacity: 1;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    svg {
+      animation: none;
+    }
+  }
+`;
+
 export const WallpaperLayerContainer = styled.div`
   position: absolute;
   top: 0;
