@@ -6,6 +6,7 @@ import { MenuOptionsMobile } from "../../components/MenuOptionsMobile";
 import { SliderComponent } from "../../components/SliderComponent";
 import { Contact } from "../../components/Contact";
 import { usePortfolio } from "../../hooks/usePortfolio";
+import { WhatDoIDo } from "../../components/WhatDoIDo";
 
 export function HomePage() {
   const { menuMobileOptions, widthScreen } = usePortfolio();
@@ -23,6 +24,7 @@ export function HomePage() {
       ) : null}
       <section id="whoAmI">
         <WhoAmI />
+        <WhatDoIDo/>
       </section>
       <section id="projects">
         <SliderComponent />

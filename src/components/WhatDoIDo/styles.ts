@@ -94,8 +94,9 @@ export const TechItem = styled.div`
 `;
 export const TechMark = styled.span<{ $color: string }>`
   display: grid; flex: 0 0 18px; width: 18px; height: 18px; place-items: center; border-radius: 5px;
-  color: ${({ $color }) => $color}; background: color-mix(in srgb, ${({ $color }) => $color} 15%, transparent);
-  font: 700 9px/1 "Roboto", Arial, sans-serif;
+  color: ${({ $color }) => $color};
+  img { display: block; width: 18px; height: 18px; object-fit: contain; }
+  svg { width: 16px; height: 16px; }
 `;
 export const CardMetaSpacer = styled.div``;
 export const MergeLine = styled.div<{ $progress: number }>`
@@ -141,6 +142,7 @@ export const WorkNumber = styled.span`
 export const WorkIcon = styled.div`
   display: grid; width: 64px; height: 64px; margin: 47px 0 21px; place-items: center; border: 1px solid rgba(255,255,255,.12);
   border-radius: 18px; color: #f5f4f0; background: rgba(255,255,255,.045); font: 300 29px/1 Arial, sans-serif;
+  svg { width: 34px; height: 34px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 `;
 export const WorkAccent = styled.span`
   position: absolute; top: 29px; right: 28px; width: 7px; height: 7px; border-radius: 50%; background: #80d2c1; opacity: .72;
